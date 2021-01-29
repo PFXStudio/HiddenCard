@@ -8,15 +8,23 @@
 import UIKit
 import CoreData
 import Firebase
+import RIBs
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private var rootRouter: LaunchRouting?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = window
+
+        self.rootRouter = RootBuilder(dependency: AppComponent()).build()
+        self.rootRouter?.launchFromWindow(window)
+        
         return true
     }
 

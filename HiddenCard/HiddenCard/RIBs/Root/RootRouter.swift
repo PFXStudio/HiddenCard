@@ -18,21 +18,31 @@ protocol RootViewControllable: ViewControllable {
     // RIB's ancestor RIBs' view.
 }
 
-final class RootRouter: Router<RootInteractable>, RootRouting {
-
+final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
     // TODO: Constructor inject child builder protocols to allow building children.
-    init(interactor: RootInteractable, viewController: RootViewControllable) {
-        self.viewController = viewController
-        super.init(interactor: interactor)
+    let loggedOutBuilder: LoggedOutBuildable
+    let loggedOutRouter: ViewableRouting?
+    init(interactor: RootInteractable, viewController: RootViewControllable, loggedOutBuilder: LoggedOutBuildable) {
+        self.loggedOutBuilder = loggedOutBuilder
+        super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
+    }
+    
+    override func didLoad() {
+        super.didLoad()
+        self.routeToLoggedOut()
     }
 
     func cleanupViews() {
         // TODO: Since this router does not own its view, it needs to cleanup the views
         // it may have added to the view hierarchy, when its interactor is deactivated.
     }
+}
 
-    // MARK: - Private
-
-    private let viewController: RootViewControllable
+extension RootRouter: RootRouting {
+    func routeToLoggedOut() {
+        let loggedOutRouter = self.loggedOutBuilder.build(withListener: self.interactor)
+        self.loggedOutRouter = loggedOutRouter
+    }
+    
 }
