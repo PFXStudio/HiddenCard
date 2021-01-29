@@ -1,0 +1,967 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40F4C10583476D7E7B375B1F /* Pods_HiddenCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8831F40B2E4669D0A0E0CAB4 /* Pods_HiddenCard.framework */; };
+		49547B892CDB45C5777B7594 /* Pods_HiddenCard_HiddenCardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE80388E774F227E952C18E /* Pods_HiddenCard_HiddenCardUITests.framework */; };
+		6D29D11525C3E38100287CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D11425C3E38100287CB4 /* AppDelegate.swift */; };
+		6D29D11925C3E38100287CB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D11825C3E38100287CB4 /* ViewController.swift */; };
+		6D29D11C25C3E38100287CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D29D11A25C3E38100287CB4 /* Main.storyboard */; };
+		6D29D11F25C3E38100287CB4 /* HiddenCard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D11D25C3E38100287CB4 /* HiddenCard.xcdatamodeld */; };
+		6D29D12125C3E38200287CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D29D12025C3E38200287CB4 /* Assets.xcassets */; };
+		6D29D12425C3E38200287CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */; };
+		6D29D12F25C3E38200287CB4 /* HiddenCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D12E25C3E38200287CB4 /* HiddenCardTests.swift */; };
+		6D29D13A25C3E38200287CB4 /* HiddenCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D13925C3E38200287CB4 /* HiddenCardUITests.swift */; };
+		6D9E016625C3E8B500E1E390 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016525C3E8B500E1E390 /* RxSwift */; };
+		6D9E016A25C3E8B500E1E390 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016925C3E8B500E1E390 /* RxRelay */; };
+		6D9E016C25C3E8B500E1E390 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016B25C3E8B500E1E390 /* RxCocoa */; };
+		6D9E017425C3E8C500E1E390 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E017325C3E8C500E1E390 /* RxDataSources */; };
+		6D9E017625C3E8C500E1E390 /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E017525C3E8C500E1E390 /* Differentiator */; };
+		6D9E017C25C3E8EA00E1E390 /* RxKingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E017B25C3E8EA00E1E390 /* RxKingfisher */; };
+		6D9E018825C3EAB600E1E390 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E018725C3EAB600E1E390 /* Hero */; };
+		6D9E018E25C3EAD800E1E390 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E018D25C3EAD800E1E390 /* Lottie */; };
+		6D9E019425C3EB3600E1E390 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E019325C3EB3600E1E390 /* SwiftMessages */; };
+		6D9E019A25C3EB6800E1E390 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E019925C3EB6800E1E390 /* NVActivityIndicatorView */; };
+		6D9E019C25C3EB6800E1E390 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E019B25C3EB6800E1E390 /* NVActivityIndicatorViewExtended */; };
+		6D9E01A225C3EBDD00E1E390 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E01A125C3EBDD00E1E390 /* RxRealm */; };
+		82A32B51DD95046DB3C35411 /* Pods_HiddenCardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA31B9FDC648FA4DF05DDEC6 /* Pods_HiddenCardTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D29D12B25C3E38200287CB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D29D10925C3E38100287CB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D29D11025C3E38100287CB4;
+			remoteInfo = HiddenCard;
+		};
+		6D29D13625C3E38200287CB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D29D10925C3E38100287CB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D29D11025C3E38100287CB4;
+			remoteInfo = HiddenCard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A584C6A4CD260B848AE5B46 /* Pods-HiddenCard-HiddenCardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCard-HiddenCardUITests.release.xcconfig"; path = "Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		120A02A671FB40D30C391DB5 /* Pods-HiddenCardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCardTests.release.xcconfig"; path = "Target Support Files/Pods-HiddenCardTests/Pods-HiddenCardTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D29D11125C3E38100287CB4 /* HiddenCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiddenCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D29D11425C3E38100287CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D29D11825C3E38100287CB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D29D11B25C3E38100287CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D29D11E25C3E38100287CB4 /* HiddenCard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HiddenCard.xcdatamodel; sourceTree = "<group>"; };
+		6D29D12025C3E38200287CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D29D12325C3E38200287CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D29D12525C3E38200287CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D29D12A25C3E38200287CB4 /* HiddenCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiddenCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D29D12E25C3E38200287CB4 /* HiddenCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardTests.swift; sourceTree = "<group>"; };
+		6D29D13025C3E38200287CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D29D13525C3E38200287CB4 /* HiddenCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiddenCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D29D13925C3E38200287CB4 /* HiddenCardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardUITests.swift; sourceTree = "<group>"; };
+		6D29D13B25C3E38200287CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D3531AF25C3EDBB00B0C384 /* HiddenCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HiddenCard.entitlements; sourceTree = "<group>"; };
+		6DE80388E774F227E952C18E /* Pods_HiddenCard_HiddenCardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiddenCard_HiddenCardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8831F40B2E4669D0A0E0CAB4 /* Pods_HiddenCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiddenCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94886B34D1676A2E8371DA22 /* Pods-HiddenCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCard.release.xcconfig"; path = "Target Support Files/Pods-HiddenCard/Pods-HiddenCard.release.xcconfig"; sourceTree = "<group>"; };
+		98620B1D776C632FB9BA7982 /* Pods-HiddenCard-HiddenCardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCard-HiddenCardUITests.debug.xcconfig"; path = "Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA31B9FDC648FA4DF05DDEC6 /* Pods_HiddenCardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiddenCardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E0BE483B75C7416EA4FD6C /* Pods-HiddenCardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCardTests.debug.xcconfig"; path = "Target Support Files/Pods-HiddenCardTests/Pods-HiddenCardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F904CEB62CFE5CDAF189CD96 /* Pods-HiddenCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCard.debug.xcconfig"; path = "Target Support Files/Pods-HiddenCard/Pods-HiddenCard.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D29D10E25C3E38100287CB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D9E017C25C3E8EA00E1E390 /* RxKingfisher in Frameworks */,
+				6D9E017625C3E8C500E1E390 /* Differentiator in Frameworks */,
+				6D9E016A25C3E8B500E1E390 /* RxRelay in Frameworks */,
+				6D9E016C25C3E8B500E1E390 /* RxCocoa in Frameworks */,
+				6D9E017425C3E8C500E1E390 /* RxDataSources in Frameworks */,
+				6D9E018E25C3EAD800E1E390 /* Lottie in Frameworks */,
+				6D9E019C25C3EB6800E1E390 /* NVActivityIndicatorViewExtended in Frameworks */,
+				6D9E016625C3E8B500E1E390 /* RxSwift in Frameworks */,
+				6D9E01A225C3EBDD00E1E390 /* RxRealm in Frameworks */,
+				6D9E018825C3EAB600E1E390 /* Hero in Frameworks */,
+				6D9E019A25C3EB6800E1E390 /* NVActivityIndicatorView in Frameworks */,
+				6D9E019425C3EB3600E1E390 /* SwiftMessages in Frameworks */,
+				40F4C10583476D7E7B375B1F /* Pods_HiddenCard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D29D12725C3E38200287CB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82A32B51DD95046DB3C35411 /* Pods_HiddenCardTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D29D13225C3E38200287CB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49547B892CDB45C5777B7594 /* Pods_HiddenCard_HiddenCardUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12440D753AAC9CF33F715DBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F904CEB62CFE5CDAF189CD96 /* Pods-HiddenCard.debug.xcconfig */,
+				94886B34D1676A2E8371DA22 /* Pods-HiddenCard.release.xcconfig */,
+				98620B1D776C632FB9BA7982 /* Pods-HiddenCard-HiddenCardUITests.debug.xcconfig */,
+				0A584C6A4CD260B848AE5B46 /* Pods-HiddenCard-HiddenCardUITests.release.xcconfig */,
+				E1E0BE483B75C7416EA4FD6C /* Pods-HiddenCardTests.debug.xcconfig */,
+				120A02A671FB40D30C391DB5 /* Pods-HiddenCardTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6D29D10825C3E38100287CB4 = {
+			isa = PBXGroup;
+			children = (
+				6D29D11325C3E38100287CB4 /* HiddenCard */,
+				6D29D12D25C3E38200287CB4 /* HiddenCardTests */,
+				6D29D13825C3E38200287CB4 /* HiddenCardUITests */,
+				6D29D11225C3E38100287CB4 /* Products */,
+				12440D753AAC9CF33F715DBF /* Pods */,
+				F670872DA6701CFEE749A4CF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D29D11225C3E38100287CB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D29D11125C3E38100287CB4 /* HiddenCard.app */,
+				6D29D12A25C3E38200287CB4 /* HiddenCardTests.xctest */,
+				6D29D13525C3E38200287CB4 /* HiddenCardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D29D11325C3E38100287CB4 /* HiddenCard */ = {
+			isa = PBXGroup;
+			children = (
+				6D3531AF25C3EDBB00B0C384 /* HiddenCard.entitlements */,
+				6D29D11425C3E38100287CB4 /* AppDelegate.swift */,
+				6D29D11825C3E38100287CB4 /* ViewController.swift */,
+				6D29D11A25C3E38100287CB4 /* Main.storyboard */,
+				6D29D12025C3E38200287CB4 /* Assets.xcassets */,
+				6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */,
+				6D29D12525C3E38200287CB4 /* Info.plist */,
+				6D29D11D25C3E38100287CB4 /* HiddenCard.xcdatamodeld */,
+			);
+			path = HiddenCard;
+			sourceTree = "<group>";
+		};
+		6D29D12D25C3E38200287CB4 /* HiddenCardTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D29D12E25C3E38200287CB4 /* HiddenCardTests.swift */,
+				6D29D13025C3E38200287CB4 /* Info.plist */,
+			);
+			path = HiddenCardTests;
+			sourceTree = "<group>";
+		};
+		6D29D13825C3E38200287CB4 /* HiddenCardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6D29D13925C3E38200287CB4 /* HiddenCardUITests.swift */,
+				6D29D13B25C3E38200287CB4 /* Info.plist */,
+			);
+			path = HiddenCardUITests;
+			sourceTree = "<group>";
+		};
+		F670872DA6701CFEE749A4CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8831F40B2E4669D0A0E0CAB4 /* Pods_HiddenCard.framework */,
+				6DE80388E774F227E952C18E /* Pods_HiddenCard_HiddenCardUITests.framework */,
+				BA31B9FDC648FA4DF05DDEC6 /* Pods_HiddenCardTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D29D11025C3E38100287CB4 /* HiddenCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D29D13E25C3E38200287CB4 /* Build configuration list for PBXNativeTarget "HiddenCard" */;
+			buildPhases = (
+				8300C4E87A1D5FA2385631C8 /* [CP] Check Pods Manifest.lock */,
+				6D29D10D25C3E38100287CB4 /* Sources */,
+				6D29D10E25C3E38100287CB4 /* Frameworks */,
+				6D29D10F25C3E38100287CB4 /* Resources */,
+				62D1D003D9C378E8662AEB03 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HiddenCard;
+			packageProductDependencies = (
+				6D9E016525C3E8B500E1E390 /* RxSwift */,
+				6D9E016925C3E8B500E1E390 /* RxRelay */,
+				6D9E016B25C3E8B500E1E390 /* RxCocoa */,
+				6D9E017325C3E8C500E1E390 /* RxDataSources */,
+				6D9E017525C3E8C500E1E390 /* Differentiator */,
+				6D9E017B25C3E8EA00E1E390 /* RxKingfisher */,
+				6D9E018725C3EAB600E1E390 /* Hero */,
+				6D9E018D25C3EAD800E1E390 /* Lottie */,
+				6D9E019325C3EB3600E1E390 /* SwiftMessages */,
+				6D9E019925C3EB6800E1E390 /* NVActivityIndicatorView */,
+				6D9E019B25C3EB6800E1E390 /* NVActivityIndicatorViewExtended */,
+				6D9E01A125C3EBDD00E1E390 /* RxRealm */,
+			);
+			productName = HiddenCard;
+			productReference = 6D29D11125C3E38100287CB4 /* HiddenCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D29D12925C3E38200287CB4 /* HiddenCardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D29D14125C3E38200287CB4 /* Build configuration list for PBXNativeTarget "HiddenCardTests" */;
+			buildPhases = (
+				041750818F4B60CC44C3B5E2 /* [CP] Check Pods Manifest.lock */,
+				6D29D12625C3E38200287CB4 /* Sources */,
+				6D29D12725C3E38200287CB4 /* Frameworks */,
+				6D29D12825C3E38200287CB4 /* Resources */,
+				8D4F255FB8340C1B85DAAA4F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D29D12C25C3E38200287CB4 /* PBXTargetDependency */,
+			);
+			name = HiddenCardTests;
+			productName = HiddenCardTests;
+			productReference = 6D29D12A25C3E38200287CB4 /* HiddenCardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6D29D13425C3E38200287CB4 /* HiddenCardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D29D14425C3E38200287CB4 /* Build configuration list for PBXNativeTarget "HiddenCardUITests" */;
+			buildPhases = (
+				EE74B75E2CC62910E9E7BAD2 /* [CP] Check Pods Manifest.lock */,
+				6D29D13125C3E38200287CB4 /* Sources */,
+				6D29D13225C3E38200287CB4 /* Frameworks */,
+				6D29D13325C3E38200287CB4 /* Resources */,
+				244A453B04606EA590E1FA5A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D29D13725C3E38200287CB4 /* PBXTargetDependency */,
+			);
+			name = HiddenCardUITests;
+			productName = HiddenCardUITests;
+			productReference = 6D29D13525C3E38200287CB4 /* HiddenCardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D29D10925C3E38100287CB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					6D29D11025C3E38100287CB4 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					6D29D12925C3E38200287CB4 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 6D29D11025C3E38100287CB4;
+					};
+					6D29D13425C3E38200287CB4 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 6D29D11025C3E38100287CB4;
+					};
+				};
+			};
+			buildConfigurationList = 6D29D10C25C3E38100287CB4 /* Build configuration list for PBXProject "HiddenCard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D29D10825C3E38100287CB4;
+			packageReferences = (
+				6D9E016425C3E8B500E1E390 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				6D9E017225C3E8C500E1E390 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				6D9E017A25C3E8EA00E1E390 /* XCRemoteSwiftPackageReference "RxKingfisher" */,
+				6D9E018625C3EAB600E1E390 /* XCRemoteSwiftPackageReference "Hero" */,
+				6D9E018C25C3EAD800E1E390 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				6D9E019225C3EB3600E1E390 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
+				6D9E019825C3EB6800E1E390 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				6D9E01A025C3EBDD00E1E390 /* XCRemoteSwiftPackageReference "RxRealm" */,
+			);
+			productRefGroup = 6D29D11225C3E38100287CB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D29D11025C3E38100287CB4 /* HiddenCard */,
+				6D29D12925C3E38200287CB4 /* HiddenCardTests */,
+				6D29D13425C3E38200287CB4 /* HiddenCardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D29D10F25C3E38100287CB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D29D12425C3E38200287CB4 /* LaunchScreen.storyboard in Resources */,
+				6D29D12125C3E38200287CB4 /* Assets.xcassets in Resources */,
+				6D29D11C25C3E38100287CB4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D29D12825C3E38200287CB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D29D13325C3E38200287CB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		041750818F4B60CC44C3B5E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HiddenCardTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		244A453B04606EA590E1FA5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62D1D003D9C378E8662AEB03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard/Pods-HiddenCard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard/Pods-HiddenCard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCard/Pods-HiddenCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8300C4E87A1D5FA2385631C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HiddenCard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D4F255FB8340C1B85DAAA4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCardTests/Pods-HiddenCardTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCardTests/Pods-HiddenCardTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCardTests/Pods-HiddenCardTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE74B75E2CC62910E9E7BAD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HiddenCard-HiddenCardUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D29D10D25C3E38100287CB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D29D11925C3E38100287CB4 /* ViewController.swift in Sources */,
+				6D29D11F25C3E38100287CB4 /* HiddenCard.xcdatamodeld in Sources */,
+				6D29D11525C3E38100287CB4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D29D12625C3E38200287CB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D29D12F25C3E38200287CB4 /* HiddenCardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D29D13125C3E38200287CB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D29D13A25C3E38200287CB4 /* HiddenCardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D29D12C25C3E38200287CB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D29D11025C3E38100287CB4 /* HiddenCard */;
+			targetProxy = 6D29D12B25C3E38200287CB4 /* PBXContainerItemProxy */;
+		};
+		6D29D13725C3E38200287CB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D29D11025C3E38100287CB4 /* HiddenCard */;
+			targetProxy = 6D29D13625C3E38200287CB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D29D11A25C3E38100287CB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D29D11B25C3E38100287CB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D29D12325C3E38200287CB4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D29D13C25C3E38200287CB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6D29D13D25C3E38200287CB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D29D13F25C3E38200287CB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F904CEB62CFE5CDAF189CD96 /* Pods-HiddenCard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HiddenCard/HiddenCard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CABCZMNNS;
+				INFOPLIST_FILE = HiddenCard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nyon.HiddenCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D29D14025C3E38200287CB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94886B34D1676A2E8371DA22 /* Pods-HiddenCard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HiddenCard/HiddenCard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CABCZMNNS;
+				INFOPLIST_FILE = HiddenCard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nyon.HiddenCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6D29D14225C3E38200287CB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1E0BE483B75C7416EA4FD6C /* Pods-HiddenCardTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CABCZMNNS;
+				INFOPLIST_FILE = HiddenCardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nyon.HiddenCardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiddenCard.app/HiddenCard";
+			};
+			name = Debug;
+		};
+		6D29D14325C3E38200287CB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 120A02A671FB40D30C391DB5 /* Pods-HiddenCardTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CABCZMNNS;
+				INFOPLIST_FILE = HiddenCardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nyon.HiddenCardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiddenCard.app/HiddenCard";
+			};
+			name = Release;
+		};
+		6D29D14525C3E38200287CB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98620B1D776C632FB9BA7982 /* Pods-HiddenCard-HiddenCardUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CABCZMNNS;
+				INFOPLIST_FILE = HiddenCardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nyon.HiddenCardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HiddenCard;
+			};
+			name = Debug;
+		};
+		6D29D14625C3E38200287CB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A584C6A4CD260B848AE5B46 /* Pods-HiddenCard-HiddenCardUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CABCZMNNS;
+				INFOPLIST_FILE = HiddenCardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nyon.HiddenCardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HiddenCard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D29D10C25C3E38100287CB4 /* Build configuration list for PBXProject "HiddenCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D29D13C25C3E38200287CB4 /* Debug */,
+				6D29D13D25C3E38200287CB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D29D13E25C3E38200287CB4 /* Build configuration list for PBXNativeTarget "HiddenCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D29D13F25C3E38200287CB4 /* Debug */,
+				6D29D14025C3E38200287CB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D29D14125C3E38200287CB4 /* Build configuration list for PBXNativeTarget "HiddenCardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D29D14225C3E38200287CB4 /* Debug */,
+				6D29D14325C3E38200287CB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D29D14425C3E38200287CB4 /* Build configuration list for PBXNativeTarget "HiddenCardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D29D14525C3E38200287CB4 /* Debug */,
+				6D29D14625C3E38200287CB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6D9E016425C3E8B500E1E390 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		6D9E017225C3E8C500E1E390 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		6D9E017A25C3E8EA00E1E390 /* XCRemoteSwiftPackageReference "RxKingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxKingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		6D9E018625C3EAB600E1E390 /* XCRemoteSwiftPackageReference "Hero" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeroTransitions/Hero";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		6D9E018C25C3EAD800E1E390 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.9;
+			};
+		};
+		6D9E019225C3EB3600E1E390 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		6D9E019825C3EB6800E1E390 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		6D9E01A025C3EBDD00E1E390 /* XCRemoteSwiftPackageReference "RxRealm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxRealm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6D9E016525C3E8B500E1E390 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E016425C3E8B500E1E390 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		6D9E016925C3E8B500E1E390 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E016425C3E8B500E1E390 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		6D9E016B25C3E8B500E1E390 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E016425C3E8B500E1E390 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		6D9E017325C3E8C500E1E390 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E017225C3E8C500E1E390 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+		6D9E017525C3E8C500E1E390 /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E017225C3E8C500E1E390 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		6D9E017B25C3E8EA00E1E390 /* RxKingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E017A25C3E8EA00E1E390 /* XCRemoteSwiftPackageReference "RxKingfisher" */;
+			productName = RxKingfisher;
+		};
+		6D9E018725C3EAB600E1E390 /* Hero */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E018625C3EAB600E1E390 /* XCRemoteSwiftPackageReference "Hero" */;
+			productName = Hero;
+		};
+		6D9E018D25C3EAD800E1E390 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E018C25C3EAD800E1E390 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		6D9E019325C3EB3600E1E390 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E019225C3EB3600E1E390 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
+		6D9E019925C3EB6800E1E390 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E019825C3EB6800E1E390 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		6D9E019B25C3EB6800E1E390 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E019825C3EB6800E1E390 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+		6D9E01A125C3EBDD00E1E390 /* RxRealm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D9E01A025C3EBDD00E1E390 /* XCRemoteSwiftPackageReference "RxRealm" */;
+			productName = RxRealm;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		6D29D11D25C3E38100287CB4 /* HiddenCard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6D29D11E25C3E38100287CB4 /* HiddenCard.xcdatamodel */,
+			);
+			currentVersion = 6D29D11E25C3E38100287CB4 /* HiddenCard.xcdatamodel */;
+			path = HiddenCard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6D29D10925C3E38100287CB4 /* Project object */;
+}
