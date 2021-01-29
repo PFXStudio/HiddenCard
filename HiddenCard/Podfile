@@ -9,6 +9,9 @@ target 'HiddenCard' do
   pod 'RIBs'
   pod 'Texture'
   pod 'TextureSwiftSupport'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+  pod 'SnapKit'
 
   target 'HiddenCardTests' do
     inherit! :search_paths

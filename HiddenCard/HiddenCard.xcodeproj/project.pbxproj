@@ -11,12 +11,21 @@
 		49547B892CDB45C5777B7594 /* Pods_HiddenCard_HiddenCardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE80388E774F227E952C18E /* Pods_HiddenCard_HiddenCardUITests.framework */; };
 		6D29D11525C3E38100287CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D11425C3E38100287CB4 /* AppDelegate.swift */; };
 		6D29D11925C3E38100287CB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D11825C3E38100287CB4 /* ViewController.swift */; };
-		6D29D11C25C3E38100287CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D29D11A25C3E38100287CB4 /* Main.storyboard */; };
+		6D29D11C25C3E38100287CB4 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D29D11A25C3E38100287CB4 /* Splash.storyboard */; };
 		6D29D11F25C3E38100287CB4 /* HiddenCard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D11D25C3E38100287CB4 /* HiddenCard.xcdatamodeld */; };
 		6D29D12125C3E38200287CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D29D12025C3E38200287CB4 /* Assets.xcassets */; };
 		6D29D12425C3E38200287CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */; };
 		6D29D12F25C3E38200287CB4 /* HiddenCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D12E25C3E38200287CB4 /* HiddenCardTests.swift */; };
 		6D29D13A25C3E38200287CB4 /* HiddenCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D13925C3E38200287CB4 /* HiddenCardUITests.swift */; };
+		6D35322D25C401D000B0C384 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D35322C25C401D000B0C384 /* GoogleService-Info.plist */; };
+		6D35323825C4047900B0C384 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35323325C4047900B0C384 /* LoggedInRouter.swift */; };
+		6D35323925C4047900B0C384 /* LoggedInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D35323425C4047900B0C384 /* LoggedInViewController.storyboard */; };
+		6D35323A25C4047900B0C384 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35323525C4047900B0C384 /* LoggedInViewController.swift */; };
+		6D35323B25C4047900B0C384 /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35323625C4047900B0C384 /* LoggedInBuilder.swift */; };
+		6D35323C25C4047900B0C384 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35323725C4047900B0C384 /* LoggedInInteractor.swift */; };
+		6D35329B25C4070100B0C384 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35329825C4070100B0C384 /* RootRouter.swift */; };
+		6D35329C25C4070100B0C384 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35329925C4070100B0C384 /* RootBuilder.swift */; };
+		6D35329D25C4070100B0C384 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35329A25C4070100B0C384 /* RootInteractor.swift */; };
 		6D9E016625C3E8B500E1E390 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016525C3E8B500E1E390 /* RxSwift */; };
 		6D9E016A25C3E8B500E1E390 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016925C3E8B500E1E390 /* RxRelay */; };
 		6D9E016C25C3E8B500E1E390 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016B25C3E8B500E1E390 /* RxCocoa */; };
@@ -55,7 +64,7 @@
 		6D29D11125C3E38100287CB4 /* HiddenCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiddenCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D29D11425C3E38100287CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D29D11825C3E38100287CB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6D29D11B25C3E38100287CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D29D11B25C3E38100287CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
 		6D29D11E25C3E38100287CB4 /* HiddenCard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HiddenCard.xcdatamodel; sourceTree = "<group>"; };
 		6D29D12025C3E38200287CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D29D12325C3E38200287CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +76,15 @@
 		6D29D13925C3E38200287CB4 /* HiddenCardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardUITests.swift; sourceTree = "<group>"; };
 		6D29D13B25C3E38200287CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D3531AF25C3EDBB00B0C384 /* HiddenCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HiddenCard.entitlements; sourceTree = "<group>"; };
+		6D35322C25C401D000B0C384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6D35323325C4047900B0C384 /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
+		6D35323425C4047900B0C384 /* LoggedInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedInViewController.storyboard; sourceTree = "<group>"; };
+		6D35323525C4047900B0C384 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		6D35323625C4047900B0C384 /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
+		6D35323725C4047900B0C384 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
+		6D35329825C4070100B0C384 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		6D35329925C4070100B0C384 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		6D35329A25C4070100B0C384 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		6DE80388E774F227E952C18E /* Pods_HiddenCard_HiddenCardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiddenCard_HiddenCardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8831F40B2E4669D0A0E0CAB4 /* Pods_HiddenCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiddenCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94886B34D1676A2E8371DA22 /* Pods-HiddenCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCard.release.xcconfig"; path = "Target Support Files/Pods-HiddenCard/Pods-HiddenCard.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,14 +172,15 @@
 		6D29D11325C3E38100287CB4 /* HiddenCard */ = {
 			isa = PBXGroup;
 			children = (
-				6D3531AF25C3EDBB00B0C384 /* HiddenCard.entitlements */,
 				6D29D11425C3E38100287CB4 /* AppDelegate.swift */,
-				6D29D11825C3E38100287CB4 /* ViewController.swift */,
-				6D29D11A25C3E38100287CB4 /* Main.storyboard */,
 				6D29D12025C3E38200287CB4 /* Assets.xcassets */,
-				6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */,
-				6D29D12525C3E38200287CB4 /* Info.plist */,
+				6D3531AF25C3EDBB00B0C384 /* HiddenCard.entitlements */,
 				6D29D11D25C3E38100287CB4 /* HiddenCard.xcdatamodeld */,
+				6D29D12525C3E38200287CB4 /* Info.plist */,
+				6D35322A25C401BC00B0C384 /* Resources */,
+				6D35328525C406C100B0C384 /* Splash */,
+				6D35323125C4045600B0C384 /* RIBs */,
+				6D29D11825C3E38100287CB4 /* ViewController.swift */,
 			);
 			path = HiddenCard;
 			sourceTree = "<group>";
@@ -182,6 +201,62 @@
 				6D29D13B25C3E38200287CB4 /* Info.plist */,
 			);
 			path = HiddenCardUITests;
+			sourceTree = "<group>";
+		};
+		6D35322A25C401BC00B0C384 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6D35322B25C401C100B0C384 /* Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6D35322B25C401C100B0C384 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D35322C25C401D000B0C384 /* GoogleService-Info.plist */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		6D35323125C4045600B0C384 /* RIBs */ = {
+			isa = PBXGroup;
+			children = (
+				6D35323225C4045E00B0C384 /* LoggedIn */,
+				6D35329725C406E700B0C384 /* Root */,
+			);
+			path = RIBs;
+			sourceTree = "<group>";
+		};
+		6D35323225C4045E00B0C384 /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				6D35323625C4047900B0C384 /* LoggedInBuilder.swift */,
+				6D35323725C4047900B0C384 /* LoggedInInteractor.swift */,
+				6D35323325C4047900B0C384 /* LoggedInRouter.swift */,
+				6D35323425C4047900B0C384 /* LoggedInViewController.storyboard */,
+				6D35323525C4047900B0C384 /* LoggedInViewController.swift */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		6D35328525C406C100B0C384 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */,
+				6D29D11A25C3E38100287CB4 /* Splash.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		6D35329725C406E700B0C384 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				6D35329925C4070100B0C384 /* RootBuilder.swift */,
+				6D35329A25C4070100B0C384 /* RootInteractor.swift */,
+				6D35329825C4070100B0C384 /* RootRouter.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		F670872DA6701CFEE749A4CF /* Frameworks */ = {
@@ -206,6 +281,7 @@
 				6D29D10E25C3E38100287CB4 /* Frameworks */,
 				6D29D10F25C3E38100287CB4 /* Resources */,
 				62D1D003D9C378E8662AEB03 /* [CP] Embed Pods Frameworks */,
+				5ACDFDC8656778CC615AE738 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +335,7 @@
 				6D29D13225C3E38200287CB4 /* Frameworks */,
 				6D29D13325C3E38200287CB4 /* Resources */,
 				244A453B04606EA590E1FA5A /* [CP] Embed Pods Frameworks */,
+				CA22AB5BBC885CC8FB05F219 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -327,9 +404,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D35323925C4047900B0C384 /* LoggedInViewController.storyboard in Resources */,
 				6D29D12425C3E38200287CB4 /* LaunchScreen.storyboard in Resources */,
+				6D35322D25C401D000B0C384 /* GoogleService-Info.plist in Resources */,
 				6D29D12125C3E38200287CB4 /* Assets.xcassets in Resources */,
-				6D29D11C25C3E38100287CB4 /* Main.storyboard in Resources */,
+				6D29D11C25C3E38100287CB4 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +468,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5ACDFDC8656778CC615AE738 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard/Pods-HiddenCard-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard/Pods-HiddenCard-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCard/Pods-HiddenCard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		62D1D003D9C378E8662AEB03 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +541,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCardTests/Pods-HiddenCardTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CA22AB5BBC885CC8FB05F219 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EE74B75E2CC62910E9E7BAD2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,7 +588,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D29D11925C3E38100287CB4 /* ViewController.swift in Sources */,
+				6D35329D25C4070100B0C384 /* RootInteractor.swift in Sources */,
+				6D35323A25C4047900B0C384 /* LoggedInViewController.swift in Sources */,
+				6D35329B25C4070100B0C384 /* RootRouter.swift in Sources */,
+				6D35323825C4047900B0C384 /* LoggedInRouter.swift in Sources */,
 				6D29D11F25C3E38100287CB4 /* HiddenCard.xcdatamodeld in Sources */,
+				6D35323B25C4047900B0C384 /* LoggedInBuilder.swift in Sources */,
+				6D35329C25C4070100B0C384 /* RootBuilder.swift in Sources */,
+				6D35323C25C4047900B0C384 /* LoggedInInteractor.swift in Sources */,
 				6D29D11525C3E38100287CB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,12 +632,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6D29D11A25C3E38100287CB4 /* Main.storyboard */ = {
+		6D29D11A25C3E38100287CB4 /* Splash.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6D29D11B25C3E38100287CB4 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Splash.storyboard;
 			sourceTree = "<group>";
 		};
 		6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */ = {
