@@ -7,12 +7,21 @@ target 'HiddenCard' do
 
   # Pods for HiddenCard
   pod 'RIBs'
-  pod 'Texture'
+  pod 'Texture', '3.0'
   pod 'TextureSwiftSupport'
+  pod 'RxCocoa-Texture', :git => 'https://github.com/PFXStudio/RxCocoa-Texture.git'
+  #tap
+  pod 'GTTexture-RxExtension', :git => 'https://github.com/PFXStudio/GTTexture-RxExtension.git'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'SnapKit'
+  pod 'FirebaseUI'
+  pod 'FirebaseUI/Auth'
 
+  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
+  pod 'FirebaseUI/Phone'
+  
   target 'HiddenCardTests' do
     inherit! :search_paths
     # Pods for testing
