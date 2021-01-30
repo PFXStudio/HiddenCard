@@ -31,7 +31,7 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
     }
 
     func build() -> LaunchRouting {
-        let viewController = RootViewController()
+        let viewController = UIStoryboard(name: "Root", bundle: nil).instantiateViewController(withIdentifier: String(describing: RootViewController.self)) as! RootViewController
         let component = RootComponent(dependency: dependency, rootViewcontroller: viewController)
         let interactor = RootInteractor(presenter: viewController)
         let loggedOutBuilder = LoggedOutBuilder(dependency: component)

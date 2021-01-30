@@ -12,8 +12,18 @@ protocol RootPresentableListener: class {
     
 }
 
-final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
+final class RootViewController: UIViewController, RootPresentable {
     var listener: RootPresentableListener?
+}
+
+extension RootViewController: RootViewControllable {
+    func present(destination: ViewControllable) {
+        self.present(destination.uiviewController, animated: true, completion: nil)
+    }
     
-    
+    func dismiss(destination: ViewControllable) {
+        if presentedViewController === destination.uiviewController {
+            dismiss(animated: true, completion: nil)
+        }
+    }
 }

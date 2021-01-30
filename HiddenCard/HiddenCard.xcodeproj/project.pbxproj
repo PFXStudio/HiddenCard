@@ -32,6 +32,7 @@
 		6D40416325C43C770025220E /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40415E25C43C770025220E /* LoggedOutBuilder.swift */; };
 		6D40416425C43C770025220E /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40415F25C43C770025220E /* LoggedOutInteractor.swift */; };
 		6D40417025C43D7E0025220E /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40416F25C43D7E0025220E /* RootComponent+LoggedOut.swift */; };
+		6D4D58B225C4EFD4006154EF /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4D58B125C4EFD4006154EF /* Root.storyboard */; };
 		6D9E016625C3E8B500E1E390 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016525C3E8B500E1E390 /* RxSwift */; };
 		6D9E016A25C3E8B500E1E390 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016925C3E8B500E1E390 /* RxRelay */; };
 		6D9E016C25C3E8B500E1E390 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016B25C3E8B500E1E390 /* RxCocoa */; };
@@ -97,6 +98,7 @@
 		6D40415E25C43C770025220E /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
 		6D40415F25C43C770025220E /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
 		6D40416F25C43D7E0025220E /* RootComponent+LoggedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedOut.swift"; sourceTree = "<group>"; };
+		6D4D58B125C4EFD4006154EF /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		6DE80388E774F227E952C18E /* Pods_HiddenCard_HiddenCardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiddenCard_HiddenCardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8831F40B2E4669D0A0E0CAB4 /* Pods_HiddenCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiddenCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94886B34D1676A2E8371DA22 /* Pods-HiddenCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCard.release.xcconfig"; path = "Target Support Files/Pods-HiddenCard/Pods-HiddenCard.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		6D35329725C406E700B0C384 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				6D4D58B125C4EFD4006154EF /* Root.storyboard */,
 				6D35329925C4070100B0C384 /* RootBuilder.swift */,
 				6D40416F25C43D7E0025220E /* RootComponent+LoggedOut.swift */,
 				6D35329A25C4070100B0C384 /* RootInteractor.swift */,
@@ -285,10 +288,10 @@
 		6D40415A25C43C5D0025220E /* LoggedOut */ = {
 			isa = PBXGroup;
 			children = (
+				6D40415C25C43C770025220E /* LoggedOut.storyboard */,
 				6D40415E25C43C770025220E /* LoggedOutBuilder.swift */,
 				6D40415F25C43C770025220E /* LoggedOutInteractor.swift */,
 				6D40415B25C43C770025220E /* LoggedOutRouter.swift */,
-				6D40415C25C43C770025220E /* LoggedOut.storyboard */,
 				6D40415D25C43C770025220E /* LoggedOutViewController.swift */,
 			);
 			path = LoggedOut;
@@ -446,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D4D58B225C4EFD4006154EF /* Root.storyboard in Resources */,
 				6D35323925C4047900B0C384 /* LoggedInViewController.storyboard in Resources */,
 				6D29D12425C3E38200287CB4 /* LaunchScreen.storyboard in Resources */,
 				6D40416125C43C770025220E /* LoggedOut.storyboard in Resources */,
