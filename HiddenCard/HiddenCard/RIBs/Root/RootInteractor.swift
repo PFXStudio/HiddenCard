@@ -7,6 +7,7 @@
 
 import RIBs
 import RxSwift
+import RxRelay
 
 protocol RootRouting: Routing {
     func cleanupViews()
@@ -25,6 +26,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
 
     weak var router: RootRouting?
     weak var listener: RootListener?
+    private let loggedOutActionableItemSubject = ReplaySubject<LoggedOutActionableItem>.create(bufferSize: 1)
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
@@ -48,4 +50,20 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
 
 extension RootInteractor: RootPresentableListener {
     
+}
+
+extension RootInteractor: RootActionableItem, UrlHandler {
+    func waitForAuth() -> Observable<(LoggedOutActionableItem, ())> {
+        return self.loggedOutActionableItemSubject
+            .map { (loggedOutItem: LoggedOutActionableItem) -> (LoggedOutActionableItem, ()) in
+                return (loggedOutItem, ())
+            }
+    }
+    
+    func handle(_ url: URL) {
+        let launchWorkFlow = LaunchSignUpWorkFlow(url: url)
+        launchWorkFlow
+            .subscribe(self)
+            .disposeOnDeactivate(interactor: self)
+    }
 }

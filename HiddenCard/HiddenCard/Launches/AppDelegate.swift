@@ -11,11 +11,16 @@ import Firebase
 import RIBs
 import FirebaseUI
 
+protocol UrlHandler: class {
+    func handle(_ url: URL)
+}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     private var rootRouter: LaunchRouting?
+    private var urlHandler: UrlHandler?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -35,7 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
         
-        return false
+        urlHandler?.handle(url)
+        return true
     }
     
     // MARK: - Core Data stack

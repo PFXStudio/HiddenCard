@@ -7,10 +7,6 @@ target 'HiddenCard' do
 
   # Pods for HiddenCard
   pod 'RIBs'
-  pod 'Texture'
-  pod 'TextureSwiftSupport'
-  pod 'RxCocoa-Texture'
-  pod 'GTTexture-RxExtension'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'SnapKit'
