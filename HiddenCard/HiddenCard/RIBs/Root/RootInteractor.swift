@@ -57,6 +57,7 @@ extension RootInteractor: RootActionableItem, UrlHandler {
         return self.loggedOutActionableItemSubject
             .map { (loggedOutItem: LoggedOutActionableItem) -> (LoggedOutActionableItem, ()) in
                 return (loggedOutItem, ())
+                
             }
     }
     
