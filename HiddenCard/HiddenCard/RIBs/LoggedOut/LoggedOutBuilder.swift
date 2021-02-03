@@ -20,7 +20,7 @@ final class LoggedOutComponent: Component<LoggedOutDependency> {
 // MARK: - Builder
 
 protocol LoggedOutBuildable: Buildable {
-    func build(withListener listener: LoggedOutListener) -> LoggedOutRouting
+    func build(withListener listener: LoggedOutListener) -> (LoggedOutRouter, LoggedOutActionableItem)
 }
 
 final class LoggedOutBuilder: Builder<LoggedOutDependency>, LoggedOutBuildable {
@@ -29,11 +29,12 @@ final class LoggedOutBuilder: Builder<LoggedOutDependency>, LoggedOutBuildable {
         super.init(dependency: dependency)
     }
 
-    func build(withListener listener: LoggedOutListener) -> LoggedOutRouting {
+    func build(withListener listener: LoggedOutListener) -> (LoggedOutRouter, LoggedOutActionableItem) {
         let component = LoggedOutComponent(dependency: dependency)
         let viewController = UIStoryboard(name: "LoggedOut", bundle: nil).instantiateViewController(withIdentifier: String(describing: LoggedOutViewController.self)) as! LoggedOutViewController
         let interactor = LoggedOutInteractor(presenter: viewController)
         interactor.listener = listener
-        return LoggedOutRouter(interactor: interactor, viewController: viewController)
+        let router = LoggedOutRouter(interactor: interactor, viewController: viewController)
+        return (router, interactor)
     }
 }

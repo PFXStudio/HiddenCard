@@ -29,7 +29,6 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
     
     override func didLoad() {
         super.didLoad()
-        self.routeToLoggedOut()
     }
 
     func cleanupViews() {
@@ -39,10 +38,13 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
 }
 
 extension RootRouter: RootRouting {
-    func routeToLoggedOut() {
-        let loggedOutRouter = self.loggedOutBuilder.build(withListener: self.interactor)
+    func routeToLoggedOut() -> LoggedOutActionableItem {
+        let values = self.loggedOutBuilder.build(withListener: self.interactor)
+        let loggedOutRouter = values.0
+        let loggedOutInteractor = values.1
         self.loggedOutRouter = loggedOutRouter
         self.attachChild(loggedOutRouter)
         self.viewController.present(destination: loggedOutRouter.viewControllable)
+        return loggedOutInteractor
     }
 }

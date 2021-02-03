@@ -6,6 +6,8 @@ target 'HiddenCard' do
   use_frameworks!
 
   # Pods for HiddenCard
+  pod 'RxCocoa'
+  pod 'RxRelay'
   pod 'RIBs'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
