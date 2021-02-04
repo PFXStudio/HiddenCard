@@ -25,6 +25,7 @@ final class SignUpInteractor: PresentableInteractor<SignUpPresentable>, SignUpIn
 
     weak var router: SignUpRouting?
     weak var listener: SignUpListener?
+    private let actionableItemSubject = ReplaySubject<SignUpActionableItem>.create(bufferSize: 1)
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
@@ -41,5 +42,14 @@ final class SignUpInteractor: PresentableInteractor<SignUpPresentable>, SignUpIn
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+}
+
+extension SignUpInteractor: SignUpActionableItem {
+    func launchHome() -> Observable<(SignUpActionableItem, ())> {
+        return self.actionableItemSubject
+            .map { (item: SignUpActionableItem) -> (SignUpActionableItem, ()) in
+                return (item, ())
+            }
     }
 }

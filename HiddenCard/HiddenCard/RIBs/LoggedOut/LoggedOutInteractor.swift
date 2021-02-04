@@ -11,7 +11,6 @@ import FirebaseUI
 
 protocol LoggedOutRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func routeToSignUp(player: Player)
 }
 
 protocol LoggedOutPresentable: Presentable {
@@ -22,6 +21,7 @@ protocol LoggedOutPresentable: Presentable {
 
 protocol LoggedOutListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func routeToSingUp(player: Player)
 }
 
 final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
@@ -56,7 +56,8 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
             return
         }
 
-        self.router?.routeToSignUp(player: player)
+        self.listener?.routeToSingUp(player: player)
+        self.deactivate()
     }
 }
 

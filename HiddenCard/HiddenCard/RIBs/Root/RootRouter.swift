@@ -7,7 +7,7 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable, LoggedOutListener {
+protocol RootInteractable: Interactable, LoggedOutListener, SignUpListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
@@ -21,8 +21,11 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
     // TODO: Constructor inject child builder protocols to allow building children.
     private let loggedOutBuilder: LoggedOutBuildable
     private var loggedOutRouter: ViewableRouting?
-    init(interactor: RootInteractable, viewController: RootViewControllable, loggedOutBuilder: LoggedOutBuildable) {
+    private let signUpBuilder: SignUpBuildable
+    private var signUpRouter: ViewableRouting?
+    init(interactor: RootInteractable, viewController: RootViewControllable, loggedOutBuilder: LoggedOutBuildable, signUpBuilder: SignUpBuildable) {
         self.loggedOutBuilder = loggedOutBuilder
+        self.signUpBuilder = signUpBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
@@ -46,5 +49,22 @@ extension RootRouter: RootRouting {
         self.attachChild(loggedOutRouter)
         self.viewController.present(destination: loggedOutRouter.viewControllable)
         return loggedOutInteractor
+    }
+    
+    func routeToSignUp(player: Player) -> SignUpActionableItem {
+        if let router = self.loggedOutRouter {
+            self.viewController.dismiss(destination: router.viewControllable)
+            self.detachChild(router)
+            self.loggedOutRouter = nil
+        }
+
+        let values = self.signUpBuilder.build(withListener: self.interactor)
+        let signUpRouter = values.0
+        self.signUpRouter = signUpRouter
+        let signUpInteractor = values.1
+        self.attachChild(signUpRouter)
+        self.viewController.present(destination: signUpRouter.viewControllable)
+        
+        return signUpInteractor
     }
 }

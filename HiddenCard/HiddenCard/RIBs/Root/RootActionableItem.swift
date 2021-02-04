@@ -9,4 +9,5 @@ import RxSwift
 
 public protocol RootActionableItem: class {
     func waitForAuth() -> Observable<(LoggedOutActionableItem, ())>
+    func waitForSignUp() -> Observable<(SignUpActionableItem, ())>
 }

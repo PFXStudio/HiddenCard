@@ -22,8 +22,4 @@ final class LoggedOutRouter: ViewableRouter<LoggedOutInteractable, LoggedOutView
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
-    
-    func routeToSignUp(player: Player) {
-        // TODO : 
-    }
 }

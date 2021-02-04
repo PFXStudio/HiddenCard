@@ -13,6 +13,7 @@ protocol RootRouting: Routing {
     func cleanupViews()
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
     func routeToLoggedOut() -> LoggedOutActionableItem
+    func routeToSignUp(player: Player) -> SignUpActionableItem
 }
 
 protocol RootPresentable: Presentable {
@@ -24,10 +25,10 @@ protocol RootListener: class {
 }
 
 final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable {
-
     weak var router: RootRouting?
     weak var listener: RootListener?
     private let loggedOutActionableItemSubject = ReplaySubject<LoggedOutActionableItem>.create(bufferSize: 1)
+    private let signUpActionableItemSubject = ReplaySubject<SignUpActionableItem>.create(bufferSize: 1)
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
@@ -48,6 +49,11 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         router?.cleanupViews()
         // TODO: Pause any business logic.
     }
+    
+    func routeToSingUp(player: Player) {
+        guard let actionItem = self.router?.routeToSignUp(player: player) else { return }
+        self.signUpActionableItemSubject.onNext(actionItem)
+    }
 }
 
 extension RootInteractor: RootPresentableListener {
@@ -57,8 +63,15 @@ extension RootInteractor: RootPresentableListener {
 extension RootInteractor: RootActionableItem, UrlHandler {
     func waitForAuth() -> Observable<(LoggedOutActionableItem, ())> {
         return self.loggedOutActionableItemSubject
-            .map { (loggedOutItem: LoggedOutActionableItem) -> (LoggedOutActionableItem, ()) in
-                return (loggedOutItem, ())
+            .map { (item: LoggedOutActionableItem) -> (LoggedOutActionableItem, ()) in
+                return (item, ())
+            }
+    }
+    
+    func waitForSignUp() -> Observable<(SignUpActionableItem, ())> {
+        return self.signUpActionableItemSubject
+            .map { (item: SignUpActionableItem) -> (SignUpActionableItem, ()) in
+                return (item, ())
             }
     }
     
