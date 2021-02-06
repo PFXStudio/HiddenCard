@@ -252,11 +252,10 @@
 		6D35329725C406E700B0C384 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				6DA88C8525CECB6E00276F5D /* Components */,
 				6D4D58B125C4EFD4006154EF /* Root.storyboard */,
 				6DE05DB025C82F5B00AF8954 /* RootActionableItem.swift */,
 				6D35329925C4070100B0C384 /* RootBuilder.swift */,
-				6D40416F25C43D7E0025220E /* RootComponent+LoggedOut.swift */,
-				6D527D0F25CC329C000BC359 /* RootComponent+SignUp.swift */,
 				6D35329A25C4070100B0C384 /* RootInteractor.swift */,
 				6D35329825C4070100B0C384 /* RootRouter.swift */,
 				6D40415225C437110025220E /* RootViewController.swift */,
@@ -301,6 +300,15 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		6DA88C8525CECB6E00276F5D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6D40416F25C43D7E0025220E /* RootComponent+LoggedOut.swift */,
+				6D527D0F25CC329C000BC359 /* RootComponent+SignUp.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		6DE05D9825C82D6F00AF8954 /* SignUp */ = {
