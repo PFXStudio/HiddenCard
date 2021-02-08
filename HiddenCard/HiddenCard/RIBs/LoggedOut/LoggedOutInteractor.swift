@@ -57,7 +57,6 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
         }
 
         self.listener?.routeToSingUp(player: player)
-        self.deactivate()
     }
 }
 

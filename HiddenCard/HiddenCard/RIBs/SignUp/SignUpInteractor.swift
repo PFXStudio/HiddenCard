@@ -43,6 +43,10 @@ final class SignUpInteractor: PresentableInteractor<SignUpPresentable>, SignUpIn
         super.willResignActive()
         // TODO: Pause any business logic.
     }
+    
+    deinit {
+        
+    }
 }
 
 extension SignUpInteractor: SignUpActionableItem {

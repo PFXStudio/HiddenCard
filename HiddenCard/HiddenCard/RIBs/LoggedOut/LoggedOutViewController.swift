@@ -19,6 +19,9 @@ protocol LoggedOutPresentableListener: class {
 final class LoggedOutViewController: UIViewController, LoggedOutPresentable, LoggedOutViewControllable {
     weak var listener: LoggedOutPresentableListener?
     private var once = false
+    deinit {
+
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if once == true { return }

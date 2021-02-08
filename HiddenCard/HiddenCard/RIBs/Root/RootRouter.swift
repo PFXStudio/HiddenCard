@@ -54,8 +54,8 @@ extension RootRouter: RootRouting {
     func routeToSignUp(player: Player) -> SignUpActionableItem {
         if let router = self.loggedOutRouter {
             self.viewController.dismiss(destination: router.viewControllable)
-            self.detachChild(router)
             self.loggedOutRouter = nil
+            self.detachChild(router)
         }
 
         let values = self.signUpBuilder.build(withListener: self.interactor)

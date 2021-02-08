@@ -17,13 +17,15 @@ final class RootViewController: UIViewController, RootPresentable {
 }
 
 extension RootViewController: RootViewControllable {
-    func present(destination: ViewControllable) {
-        self.present(destination.uiviewController, animated: true, completion: nil)
+    func dismiss(destination: ViewControllable, completion: @escaping () -> ()) {
+        if presentedViewController === destination.uiviewController {
+            dismiss(animated: true) {
+                completion()
+            }
+        }
     }
     
-    func dismiss(destination: ViewControllable) {
-        if presentedViewController === destination.uiviewController {
-            dismiss(animated: true, completion: nil)
-        }
+    func present(destination: ViewControllable) {
+        self.present(destination.uiviewController, animated: true, completion: nil)
     }
 }
