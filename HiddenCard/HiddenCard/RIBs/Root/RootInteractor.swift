@@ -39,8 +39,6 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        guard let actionItem = self.router?.routeToLoggedOut() else { return }
-        self.loggedOutActionableItemSubject.onNext(actionItem)
     }
 
     override func willResignActive() {
@@ -50,6 +48,12 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         // TODO: Pause any business logic.
     }
     
+    func routeToLoggedOut() {
+        guard let actionItem = self.router?.routeToLoggedOut() else { return }
+        // TODO : 릭남
+//        self.loggedOutActionableItemSubject.onNext(actionItem)
+    }
+    
     func routeToSignUp(player: Player) {
         guard let actionItem = self.router?.routeToSignUp(player: player) else { return }
         self.signUpActionableItemSubject.onNext(actionItem)
@@ -57,7 +61,9 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
 }
 
 extension RootInteractor: RootPresentableListener {
-    
+    func viewDidAppear() {
+        self.routeToLoggedOut()
+    }
 }
 
 extension RootInteractor: RootActionableItem, UrlHandler {

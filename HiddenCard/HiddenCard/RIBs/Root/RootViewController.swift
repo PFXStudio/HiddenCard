@@ -9,16 +9,24 @@ import RIBs
 import UIKit
 
 protocol RootPresentableListener: class {
-    
+    func viewDidAppear()
 }
 
 final class RootViewController: UIViewController, RootPresentable {
     weak var listener: RootPresentableListener?
     private var targetViewController: ViewControllable?
     private var animationInProgress = false
+    private var once = false
 }
 
 extension RootViewController: RootViewControllable {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if once == true { return }
+        self.listener?.viewDidAppear()
+        once = true
+    }
+    
     func replaceModal(viewController: ViewControllable?) {
         targetViewController = viewController
 

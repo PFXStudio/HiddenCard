@@ -29,6 +29,9 @@ final class SignUpInteractor: PresentableInteractor<SignUpPresentable>, SignUpIn
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
+    deinit {
+        
+    }
     override init(presenter: SignUpPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
@@ -42,10 +45,6 @@ final class SignUpInteractor: PresentableInteractor<SignUpPresentable>, SignUpIn
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
-    }
-    
-    deinit {
-        
     }
 }
 

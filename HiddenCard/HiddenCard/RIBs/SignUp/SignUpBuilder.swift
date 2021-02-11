@@ -32,6 +32,7 @@ final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
     func build(withListener listener: SignUpListener) -> (SignUpRouting, SignUpActionableItem) {
         let component = SignUpComponent(dependency: dependency)
         let viewController = UIStoryboard(name: "SignUp", bundle: nil).instantiateViewController(withIdentifier: String(describing: SignUpViewController.self)) as! SignUpViewController
+        viewController.modalPresentationStyle = .fullScreen
         let interactor = SignUpInteractor(presenter: viewController)
         interactor.listener = listener
         return (SignUpRouter(interactor: interactor, viewController: viewController), interactor)

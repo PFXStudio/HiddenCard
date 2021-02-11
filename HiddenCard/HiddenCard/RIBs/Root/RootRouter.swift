@@ -18,10 +18,9 @@ protocol RootViewControllable: ViewControllable {
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
     // TODO: Constructor inject child builder protocols to allow building children.
+    private var currentChild: ViewableRouting?
     private let loggedOutBuilder: LoggedOutBuildable
-    private var loggedOutRouter: ViewableRouting?
     private let signUpBuilder: SignUpBuildable
-    private var signUpRouter: ViewableRouting?
     init(interactor: RootInteractable, viewController: RootViewControllable, loggedOutBuilder: LoggedOutBuildable, signUpBuilder: SignUpBuildable) {
         self.loggedOutBuilder = loggedOutBuilder
         self.signUpBuilder = signUpBuilder
@@ -41,29 +40,33 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
 
 extension RootRouter: RootRouting {
     func routeToLoggedOut() -> LoggedOutActionableItem {
+        self.detachCurrentChild()
         let values = self.loggedOutBuilder.build(withListener: self.interactor)
         let loggedOutRouter = values.0
         let loggedOutInteractor = values.1
-        self.loggedOutRouter = loggedOutRouter
+        currentChild = loggedOutRouter
         self.attachChild(loggedOutRouter)
         self.viewController.replaceModal(viewController: loggedOutRouter.viewControllable)
         return loggedOutInteractor
     }
     
+    
     func routeToSignUp(player: Player) -> SignUpActionableItem {
-        if let router = self.loggedOutRouter {
-            self.detachChild(router)
-            self.viewController.replaceModal(viewController: nil)
-            self.loggedOutRouter = nil
-        }
-
+        self.detachCurrentChild()
         let values = self.signUpBuilder.build(withListener: self.interactor)
         let signUpRouter = values.0
+        currentChild = signUpRouter
         self.attachChild(signUpRouter)
-        self.signUpRouter = signUpRouter
         let signUpInteractor = values.1
         self.viewController.replaceModal(viewController: signUpRouter.viewControllable)
         
         return signUpInteractor
+    }
+    
+    private func detachCurrentChild() {
+        if let currentChild = currentChild {
+            detachChild(currentChild)
+            viewController.replaceModal(viewController: nil)
+        }
     }
 }
