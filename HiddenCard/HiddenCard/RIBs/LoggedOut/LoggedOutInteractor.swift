@@ -21,7 +21,7 @@ protocol LoggedOutPresentable: Presentable {
 
 protocol LoggedOutListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
-    func routeToSingUp(player: Player)
+    func routeToSignUp(player: Player)
 }
 
 final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
@@ -31,6 +31,9 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
+    deinit {
+        
+    }
     override init(presenter: LoggedOutPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
@@ -56,7 +59,7 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
             return
         }
 
-        self.listener?.routeToSingUp(player: player)
+        self.listener?.routeToSignUp(player: player)
     }
 }
 

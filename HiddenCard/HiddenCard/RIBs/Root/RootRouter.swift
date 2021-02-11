@@ -13,8 +13,7 @@ protocol RootInteractable: Interactable, LoggedOutListener, SignUpListener {
 }
 
 protocol RootViewControllable: ViewControllable {
-    func present(destination: ViewControllable)
-    func dismiss(destination: ViewControllable)
+    func replaceModal(viewController: ViewControllable?)
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
@@ -47,23 +46,23 @@ extension RootRouter: RootRouting {
         let loggedOutInteractor = values.1
         self.loggedOutRouter = loggedOutRouter
         self.attachChild(loggedOutRouter)
-        self.viewController.present(destination: loggedOutRouter.viewControllable)
+        self.viewController.replaceModal(viewController: loggedOutRouter.viewControllable)
         return loggedOutInteractor
     }
     
     func routeToSignUp(player: Player) -> SignUpActionableItem {
         if let router = self.loggedOutRouter {
-            self.viewController.dismiss(destination: router.viewControllable)
-            self.loggedOutRouter = nil
             self.detachChild(router)
+            self.viewController.replaceModal(viewController: nil)
+            self.loggedOutRouter = nil
         }
 
         let values = self.signUpBuilder.build(withListener: self.interactor)
         let signUpRouter = values.0
+        self.attachChild(signUpRouter)
         self.signUpRouter = signUpRouter
         let signUpInteractor = values.1
-        self.attachChild(signUpRouter)
-        self.viewController.present(destination: signUpRouter.viewControllable)
+        self.viewController.replaceModal(viewController: signUpRouter.viewControllable)
         
         return signUpInteractor
     }

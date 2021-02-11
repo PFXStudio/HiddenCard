@@ -50,7 +50,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         // TODO: Pause any business logic.
     }
     
-    func routeToSingUp(player: Player) {
+    func routeToSignUp(player: Player) {
         guard let actionItem = self.router?.routeToSignUp(player: player) else { return }
         self.signUpActionableItemSubject.onNext(actionItem)
     }

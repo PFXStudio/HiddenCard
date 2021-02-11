@@ -31,7 +31,7 @@ final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
 
     func build(withListener listener: SignUpListener) -> (SignUpRouting, SignUpActionableItem) {
         let component = SignUpComponent(dependency: dependency)
-        let viewController = SignUpViewController()
+        let viewController = UIStoryboard(name: "SignUp", bundle: nil).instantiateViewController(withIdentifier: String(describing: SignUpViewController.self)) as! SignUpViewController
         let interactor = SignUpInteractor(presenter: viewController)
         interactor.listener = listener
         return (SignUpRouter(interactor: interactor, viewController: viewController), interactor)

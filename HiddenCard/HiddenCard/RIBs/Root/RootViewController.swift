@@ -13,19 +13,39 @@ protocol RootPresentableListener: class {
 }
 
 final class RootViewController: UIViewController, RootPresentable {
-    var listener: RootPresentableListener?
+    weak var listener: RootPresentableListener?
+    private var targetViewController: ViewControllable?
+    private var animationInProgress = false
 }
 
 extension RootViewController: RootViewControllable {
-    func dismiss(destination: ViewControllable, completion: @escaping () -> ()) {
-        if presentedViewController === destination.uiviewController {
-            dismiss(animated: true) {
-                completion()
+    func replaceModal(viewController: ViewControllable?) {
+        targetViewController = viewController
+
+        guard !animationInProgress else {
+            return
+        }
+
+        if presentedViewController != nil {
+            animationInProgress = true
+            dismiss(animated: true) { [weak self] in
+                if self?.targetViewController != nil {
+                    self?.presentTargetViewController()
+                } else {
+                    self?.animationInProgress = false
+                }
             }
+        } else {
+            presentTargetViewController()
         }
     }
-    
-    func present(destination: ViewControllable) {
-        self.present(destination.uiviewController, animated: true, completion: nil)
+
+    private func presentTargetViewController() {
+        if let targetViewController = targetViewController {
+            animationInProgress = true
+            present(targetViewController.uiviewController, animated: true) { [weak self] in
+                self?.animationInProgress = false
+            }
+        }
     }
 }
