@@ -6,10 +6,19 @@ target 'HiddenCard' do
   use_frameworks!
 
   # Pods for HiddenCard
+  pod 'RxCocoa'
+  pod 'RxRelay'
   pod 'RIBs'
-  pod 'Texture'
-  pod 'TextureSwiftSupport'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+  pod 'SnapKit'
+  pod 'FirebaseUI'
+  pod 'FirebaseUI/Auth'
 
+  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
+  pod 'FirebaseUI/Phone'
+  
   target 'HiddenCardTests' do
     inherit! :search_paths
     # Pods for testing
