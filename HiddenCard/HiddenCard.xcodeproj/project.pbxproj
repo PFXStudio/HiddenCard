@@ -9,26 +9,41 @@
 /* Begin PBXBuildFile section */
 		40F4C10583476D7E7B375B1F /* Pods_HiddenCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8831F40B2E4669D0A0E0CAB4 /* Pods_HiddenCard.framework */; };
 		49547B892CDB45C5777B7594 /* Pods_HiddenCard_HiddenCardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE80388E774F227E952C18E /* Pods_HiddenCard_HiddenCardUITests.framework */; };
+		6D23014A25CAE6EC001B3596 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23014925CAE6EC001B3596 /* Player.swift */; };
 		6D29D11525C3E38100287CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D11425C3E38100287CB4 /* AppDelegate.swift */; };
-		6D29D11925C3E38100287CB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D11825C3E38100287CB4 /* ViewController.swift */; };
-		6D29D11C25C3E38100287CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D29D11A25C3E38100287CB4 /* Main.storyboard */; };
 		6D29D11F25C3E38100287CB4 /* HiddenCard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D11D25C3E38100287CB4 /* HiddenCard.xcdatamodeld */; };
 		6D29D12125C3E38200287CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D29D12025C3E38200287CB4 /* Assets.xcassets */; };
 		6D29D12425C3E38200287CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */; };
 		6D29D12F25C3E38200287CB4 /* HiddenCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D12E25C3E38200287CB4 /* HiddenCardTests.swift */; };
 		6D29D13A25C3E38200287CB4 /* HiddenCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D13925C3E38200287CB4 /* HiddenCardUITests.swift */; };
-		6D9E016625C3E8B500E1E390 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016525C3E8B500E1E390 /* RxSwift */; };
-		6D9E016A25C3E8B500E1E390 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016925C3E8B500E1E390 /* RxRelay */; };
-		6D9E016C25C3E8B500E1E390 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E016B25C3E8B500E1E390 /* RxCocoa */; };
-		6D9E017425C3E8C500E1E390 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E017325C3E8C500E1E390 /* RxDataSources */; };
-		6D9E017625C3E8C500E1E390 /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E017525C3E8C500E1E390 /* Differentiator */; };
-		6D9E017C25C3E8EA00E1E390 /* RxKingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E017B25C3E8EA00E1E390 /* RxKingfisher */; };
+		6D35322D25C401D000B0C384 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D35322C25C401D000B0C384 /* GoogleService-Info.plist */; };
+		6D35329B25C4070100B0C384 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35329825C4070100B0C384 /* RootRouter.swift */; };
+		6D35329C25C4070100B0C384 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35329925C4070100B0C384 /* RootBuilder.swift */; };
+		6D35329D25C4070100B0C384 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35329A25C4070100B0C384 /* RootInteractor.swift */; };
+		6D3F2FD625C42FE0003E2ED4 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3F2FD525C42FE0003E2ED4 /* AppComponent.swift */; };
+		6D40415325C437110025220E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40415225C437110025220E /* RootViewController.swift */; };
+		6D40416025C43C770025220E /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40415B25C43C770025220E /* LoggedOutRouter.swift */; };
+		6D40416125C43C770025220E /* LoggedOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D40415C25C43C770025220E /* LoggedOut.storyboard */; };
+		6D40416225C43C770025220E /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40415D25C43C770025220E /* LoggedOutViewController.swift */; };
+		6D40416325C43C770025220E /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40415E25C43C770025220E /* LoggedOutBuilder.swift */; };
+		6D40416425C43C770025220E /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40415F25C43C770025220E /* LoggedOutInteractor.swift */; };
+		6D40417025C43D7E0025220E /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40416F25C43D7E0025220E /* RootComponent+LoggedOut.swift */; };
+		6D4D58B225C4EFD4006154EF /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4D58B125C4EFD4006154EF /* Root.storyboard */; };
+		6D527D1025CC329C000BC359 /* RootComponent+SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D527D0F25CC329C000BC359 /* RootComponent+SignUp.swift */; };
 		6D9E018825C3EAB600E1E390 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E018725C3EAB600E1E390 /* Hero */; };
 		6D9E018E25C3EAD800E1E390 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E018D25C3EAD800E1E390 /* Lottie */; };
 		6D9E019425C3EB3600E1E390 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E019325C3EB3600E1E390 /* SwiftMessages */; };
 		6D9E019A25C3EB6800E1E390 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E019925C3EB6800E1E390 /* NVActivityIndicatorView */; };
 		6D9E019C25C3EB6800E1E390 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E019B25C3EB6800E1E390 /* NVActivityIndicatorViewExtended */; };
-		6D9E01A225C3EBDD00E1E390 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 6D9E01A125C3EBDD00E1E390 /* RxRealm */; };
+		6DE05D9E25C82D9C00AF8954 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE05D9925C82D9C00AF8954 /* SignUpRouter.swift */; };
+		6DE05D9F25C82D9C00AF8954 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE05D9A25C82D9C00AF8954 /* SignUp.storyboard */; };
+		6DE05DA025C82D9C00AF8954 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE05D9B25C82D9C00AF8954 /* SignUpViewController.swift */; };
+		6DE05DA125C82D9C00AF8954 /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE05D9C25C82D9C00AF8954 /* SignUpBuilder.swift */; };
+		6DE05DA225C82D9C00AF8954 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE05D9D25C82D9C00AF8954 /* SignUpInteractor.swift */; };
+		6DE05DB125C82F5B00AF8954 /* RootActionableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE05DB025C82F5B00AF8954 /* RootActionableItem.swift */; };
+		6DE05DC125C8305C00AF8954 /* SignUpActionableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE05DC025C8305C00AF8954 /* SignUpActionableItem.swift */; };
+		6DE05DCA25C8321400AF8954 /* LaunchSignUpWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE05DC925C8321400AF8954 /* LaunchSignUpWorkflow.swift */; };
+		6DE05DD225C832A400AF8954 /* LoggedOutActionableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE05DD125C832A400AF8954 /* LoggedOutActionableItem.swift */; };
 		82A32B51DD95046DB3C35411 /* Pods_HiddenCardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA31B9FDC648FA4DF05DDEC6 /* Pods_HiddenCardTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +67,9 @@
 /* Begin PBXFileReference section */
 		0A584C6A4CD260B848AE5B46 /* Pods-HiddenCard-HiddenCardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCard-HiddenCardUITests.release.xcconfig"; path = "Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		120A02A671FB40D30C391DB5 /* Pods-HiddenCardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCardTests.release.xcconfig"; path = "Target Support Files/Pods-HiddenCardTests/Pods-HiddenCardTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D23014925CAE6EC001B3596 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		6D29D11125C3E38100287CB4 /* HiddenCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiddenCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D29D11425C3E38100287CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D29D11825C3E38100287CB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6D29D11B25C3E38100287CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D29D11E25C3E38100287CB4 /* HiddenCard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HiddenCard.xcdatamodel; sourceTree = "<group>"; };
 		6D29D12025C3E38200287CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D29D12325C3E38200287CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +81,29 @@
 		6D29D13925C3E38200287CB4 /* HiddenCardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardUITests.swift; sourceTree = "<group>"; };
 		6D29D13B25C3E38200287CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D3531AF25C3EDBB00B0C384 /* HiddenCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HiddenCard.entitlements; sourceTree = "<group>"; };
+		6D35322C25C401D000B0C384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6D35329825C4070100B0C384 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		6D35329925C4070100B0C384 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		6D35329A25C4070100B0C384 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		6D3F2FD525C42FE0003E2ED4 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		6D40415225C437110025220E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		6D40415B25C43C770025220E /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
+		6D40415C25C43C770025220E /* LoggedOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedOut.storyboard; sourceTree = "<group>"; };
+		6D40415D25C43C770025220E /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		6D40415E25C43C770025220E /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
+		6D40415F25C43C770025220E /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
+		6D40416F25C43D7E0025220E /* RootComponent+LoggedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedOut.swift"; sourceTree = "<group>"; };
+		6D4D58B125C4EFD4006154EF /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		6D527D0F25CC329C000BC359 /* RootComponent+SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+SignUp.swift"; sourceTree = "<group>"; };
+		6DE05D9925C82D9C00AF8954 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		6DE05D9A25C82D9C00AF8954 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		6DE05D9B25C82D9C00AF8954 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6DE05D9C25C82D9C00AF8954 /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
+		6DE05D9D25C82D9C00AF8954 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		6DE05DB025C82F5B00AF8954 /* RootActionableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootActionableItem.swift; sourceTree = "<group>"; };
+		6DE05DC025C8305C00AF8954 /* SignUpActionableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpActionableItem.swift; sourceTree = "<group>"; };
+		6DE05DC925C8321400AF8954 /* LaunchSignUpWorkflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSignUpWorkflow.swift; sourceTree = "<group>"; };
+		6DE05DD125C832A400AF8954 /* LoggedOutActionableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutActionableItem.swift; sourceTree = "<group>"; };
 		6DE80388E774F227E952C18E /* Pods_HiddenCard_HiddenCardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiddenCard_HiddenCardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8831F40B2E4669D0A0E0CAB4 /* Pods_HiddenCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiddenCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94886B34D1676A2E8371DA22 /* Pods-HiddenCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiddenCard.release.xcconfig"; path = "Target Support Files/Pods-HiddenCard/Pods-HiddenCard.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,15 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D9E017C25C3E8EA00E1E390 /* RxKingfisher in Frameworks */,
-				6D9E017625C3E8C500E1E390 /* Differentiator in Frameworks */,
-				6D9E016A25C3E8B500E1E390 /* RxRelay in Frameworks */,
-				6D9E016C25C3E8B500E1E390 /* RxCocoa in Frameworks */,
-				6D9E017425C3E8C500E1E390 /* RxDataSources in Frameworks */,
 				6D9E018E25C3EAD800E1E390 /* Lottie in Frameworks */,
 				6D9E019C25C3EB6800E1E390 /* NVActivityIndicatorViewExtended in Frameworks */,
-				6D9E016625C3E8B500E1E390 /* RxSwift in Frameworks */,
-				6D9E01A225C3EBDD00E1E390 /* RxRealm in Frameworks */,
 				6D9E018825C3EAB600E1E390 /* Hero in Frameworks */,
 				6D9E019A25C3EB6800E1E390 /* NVActivityIndicatorView in Frameworks */,
 				6D9E019425C3EB3600E1E390 /* SwiftMessages in Frameworks */,
@@ -129,6 +159,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6D23014825CAE6D4001B3596 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				6D23014925CAE6EC001B3596 /* Player.swift */,
+			);
+			path = Datas;
+			sourceTree = "<group>";
+		};
 		6D29D10825C3E38100287CB4 = {
 			isa = PBXGroup;
 			children = (
@@ -154,14 +192,13 @@
 		6D29D11325C3E38100287CB4 /* HiddenCard */ = {
 			isa = PBXGroup;
 			children = (
-				6D3531AF25C3EDBB00B0C384 /* HiddenCard.entitlements */,
-				6D29D11425C3E38100287CB4 /* AppDelegate.swift */,
-				6D29D11825C3E38100287CB4 /* ViewController.swift */,
-				6D29D11A25C3E38100287CB4 /* Main.storyboard */,
-				6D29D12025C3E38200287CB4 /* Assets.xcassets */,
-				6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */,
-				6D29D12525C3E38200287CB4 /* Info.plist */,
-				6D29D11D25C3E38100287CB4 /* HiddenCard.xcdatamodeld */,
+				6D23014825CAE6D4001B3596 /* Datas */,
+				6D3F2FA825C42E4E003E2ED4 /* Launches */,
+				6DE05DC825C831FE00AF8954 /* Promo */,
+				6D35322A25C401BC00B0C384 /* Resources */,
+				6D35323125C4045600B0C384 /* RIBs */,
+				6D40416B25C43C880025220E /* Services */,
+				6D3F2FAC25C42E69003E2ED4 /* Support Files */,
 			);
 			path = HiddenCard;
 			sourceTree = "<group>";
@@ -182,6 +219,117 @@
 				6D29D13B25C3E38200287CB4 /* Info.plist */,
 			);
 			path = HiddenCardUITests;
+			sourceTree = "<group>";
+		};
+		6D35322A25C401BC00B0C384 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6D29D12025C3E38200287CB4 /* Assets.xcassets */,
+				6D35322B25C401C100B0C384 /* Files */,
+				6D29D11D25C3E38100287CB4 /* HiddenCard.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6D35322B25C401C100B0C384 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D35322C25C401D000B0C384 /* GoogleService-Info.plist */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		6D35323125C4045600B0C384 /* RIBs */ = {
+			isa = PBXGroup;
+			children = (
+				6D40415A25C43C5D0025220E /* LoggedOut */,
+				6D35329725C406E700B0C384 /* Root */,
+				6DE05D9825C82D6F00AF8954 /* SignUp */,
+			);
+			path = RIBs;
+			sourceTree = "<group>";
+		};
+		6D35329725C406E700B0C384 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				6DA88C8525CECB6E00276F5D /* Components */,
+				6D4D58B125C4EFD4006154EF /* Root.storyboard */,
+				6DE05DB025C82F5B00AF8954 /* RootActionableItem.swift */,
+				6D35329925C4070100B0C384 /* RootBuilder.swift */,
+				6D35329A25C4070100B0C384 /* RootInteractor.swift */,
+				6D35329825C4070100B0C384 /* RootRouter.swift */,
+				6D40415225C437110025220E /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		6D3F2FA825C42E4E003E2ED4 /* Launches */ = {
+			isa = PBXGroup;
+			children = (
+				6D3F2FD525C42FE0003E2ED4 /* AppComponent.swift */,
+				6D29D11425C3E38100287CB4 /* AppDelegate.swift */,
+				6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */,
+			);
+			path = Launches;
+			sourceTree = "<group>";
+		};
+		6D3F2FAC25C42E69003E2ED4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D3531AF25C3EDBB00B0C384 /* HiddenCard.entitlements */,
+				6D29D12525C3E38200287CB4 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		6D40415A25C43C5D0025220E /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				6D40415C25C43C770025220E /* LoggedOut.storyboard */,
+				6DE05DD125C832A400AF8954 /* LoggedOutActionableItem.swift */,
+				6D40415E25C43C770025220E /* LoggedOutBuilder.swift */,
+				6D40415F25C43C770025220E /* LoggedOutInteractor.swift */,
+				6D40415B25C43C770025220E /* LoggedOutRouter.swift */,
+				6D40415D25C43C770025220E /* LoggedOutViewController.swift */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		6D40416B25C43C880025220E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6DA88C8525CECB6E00276F5D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6D40416F25C43D7E0025220E /* RootComponent+LoggedOut.swift */,
+				6D527D0F25CC329C000BC359 /* RootComponent+SignUp.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6DE05D9825C82D6F00AF8954 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				6DE05D9A25C82D9C00AF8954 /* SignUp.storyboard */,
+				6DE05DC025C8305C00AF8954 /* SignUpActionableItem.swift */,
+				6DE05D9C25C82D9C00AF8954 /* SignUpBuilder.swift */,
+				6DE05D9D25C82D9C00AF8954 /* SignUpInteractor.swift */,
+				6DE05D9925C82D9C00AF8954 /* SignUpRouter.swift */,
+				6DE05D9B25C82D9C00AF8954 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		6DE05DC825C831FE00AF8954 /* Promo */ = {
+			isa = PBXGroup;
+			children = (
+				6DE05DC925C8321400AF8954 /* LaunchSignUpWorkflow.swift */,
+			);
+			path = Promo;
 			sourceTree = "<group>";
 		};
 		F670872DA6701CFEE749A4CF /* Frameworks */ = {
@@ -206,6 +354,7 @@
 				6D29D10E25C3E38100287CB4 /* Frameworks */,
 				6D29D10F25C3E38100287CB4 /* Resources */,
 				62D1D003D9C378E8662AEB03 /* [CP] Embed Pods Frameworks */,
+				5ACDFDC8656778CC615AE738 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,18 +362,11 @@
 			);
 			name = HiddenCard;
 			packageProductDependencies = (
-				6D9E016525C3E8B500E1E390 /* RxSwift */,
-				6D9E016925C3E8B500E1E390 /* RxRelay */,
-				6D9E016B25C3E8B500E1E390 /* RxCocoa */,
-				6D9E017325C3E8C500E1E390 /* RxDataSources */,
-				6D9E017525C3E8C500E1E390 /* Differentiator */,
-				6D9E017B25C3E8EA00E1E390 /* RxKingfisher */,
 				6D9E018725C3EAB600E1E390 /* Hero */,
 				6D9E018D25C3EAD800E1E390 /* Lottie */,
 				6D9E019325C3EB3600E1E390 /* SwiftMessages */,
 				6D9E019925C3EB6800E1E390 /* NVActivityIndicatorView */,
 				6D9E019B25C3EB6800E1E390 /* NVActivityIndicatorViewExtended */,
-				6D9E01A125C3EBDD00E1E390 /* RxRealm */,
 			);
 			productName = HiddenCard;
 			productReference = 6D29D11125C3E38100287CB4 /* HiddenCard.app */;
@@ -259,6 +401,7 @@
 				6D29D13225C3E38200287CB4 /* Frameworks */,
 				6D29D13325C3E38200287CB4 /* Resources */,
 				244A453B04606EA590E1FA5A /* [CP] Embed Pods Frameworks */,
+				CA22AB5BBC885CC8FB05F219 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,14 +445,10 @@
 			);
 			mainGroup = 6D29D10825C3E38100287CB4;
 			packageReferences = (
-				6D9E016425C3E8B500E1E390 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				6D9E017225C3E8C500E1E390 /* XCRemoteSwiftPackageReference "RxDataSources" */,
-				6D9E017A25C3E8EA00E1E390 /* XCRemoteSwiftPackageReference "RxKingfisher" */,
 				6D9E018625C3EAB600E1E390 /* XCRemoteSwiftPackageReference "Hero" */,
 				6D9E018C25C3EAD800E1E390 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				6D9E019225C3EB3600E1E390 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				6D9E019825C3EB6800E1E390 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
-				6D9E01A025C3EBDD00E1E390 /* XCRemoteSwiftPackageReference "RxRealm" */,
 			);
 			productRefGroup = 6D29D11225C3E38100287CB4 /* Products */;
 			projectDirPath = "";
@@ -327,9 +466,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D4D58B225C4EFD4006154EF /* Root.storyboard in Resources */,
 				6D29D12425C3E38200287CB4 /* LaunchScreen.storyboard in Resources */,
+				6D40416125C43C770025220E /* LoggedOut.storyboard in Resources */,
+				6DE05D9F25C82D9C00AF8954 /* SignUp.storyboard in Resources */,
+				6D35322D25C401D000B0C384 /* GoogleService-Info.plist in Resources */,
 				6D29D12125C3E38200287CB4 /* Assets.xcassets in Resources */,
-				6D29D11C25C3E38100287CB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +531,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5ACDFDC8656778CC615AE738 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard/Pods-HiddenCard-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard/Pods-HiddenCard-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCard/Pods-HiddenCard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		62D1D003D9C378E8662AEB03 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +604,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCardTests/Pods-HiddenCardTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CA22AB5BBC885CC8FB05F219 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiddenCard-HiddenCardUITests/Pods-HiddenCard-HiddenCardUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EE74B75E2CC62910E9E7BAD2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,8 +650,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D29D11925C3E38100287CB4 /* ViewController.swift in Sources */,
+				6D35329D25C4070100B0C384 /* RootInteractor.swift in Sources */,
+				6DE05DD225C832A400AF8954 /* LoggedOutActionableItem.swift in Sources */,
+				6DE05DCA25C8321400AF8954 /* LaunchSignUpWorkflow.swift in Sources */,
+				6D40416425C43C770025220E /* LoggedOutInteractor.swift in Sources */,
+				6D40416225C43C770025220E /* LoggedOutViewController.swift in Sources */,
+				6D40417025C43D7E0025220E /* RootComponent+LoggedOut.swift in Sources */,
+				6D35329B25C4070100B0C384 /* RootRouter.swift in Sources */,
+				6DE05DA025C82D9C00AF8954 /* SignUpViewController.swift in Sources */,
+				6DE05D9E25C82D9C00AF8954 /* SignUpRouter.swift in Sources */,
+				6D23014A25CAE6EC001B3596 /* Player.swift in Sources */,
+				6DE05DA125C82D9C00AF8954 /* SignUpBuilder.swift in Sources */,
+				6D527D1025CC329C000BC359 /* RootComponent+SignUp.swift in Sources */,
+				6DE05DC125C8305C00AF8954 /* SignUpActionableItem.swift in Sources */,
+				6D40415325C437110025220E /* RootViewController.swift in Sources */,
 				6D29D11F25C3E38100287CB4 /* HiddenCard.xcdatamodeld in Sources */,
+				6D3F2FD625C42FE0003E2ED4 /* AppComponent.swift in Sources */,
+				6D40416025C43C770025220E /* LoggedOutRouter.swift in Sources */,
+				6D40416325C43C770025220E /* LoggedOutBuilder.swift in Sources */,
+				6D35329C25C4070100B0C384 /* RootBuilder.swift in Sources */,
+				6DE05DA225C82D9C00AF8954 /* SignUpInteractor.swift in Sources */,
+				6DE05DB125C82F5B00AF8954 /* RootActionableItem.swift in Sources */,
 				6D29D11525C3E38100287CB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,14 +707,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6D29D11A25C3E38100287CB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D29D11B25C3E38100287CB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6D29D12225C3E38200287CB4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -653,10 +840,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HiddenCard/HiddenCard.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "HiddenCard/Support Files/HiddenCard.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8CABCZMNNS;
-				INFOPLIST_FILE = HiddenCard/Info.plist;
+				INFOPLIST_FILE = "HiddenCard/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -675,10 +862,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HiddenCard/HiddenCard.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "HiddenCard/Support Files/HiddenCard.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8CABCZMNNS;
-				INFOPLIST_FILE = HiddenCard/Info.plist;
+				INFOPLIST_FILE = "HiddenCard/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -821,30 +1008,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6D9E016425C3E8B500E1E390 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		6D9E017225C3E8C500E1E390 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		6D9E017A25C3E8EA00E1E390 /* XCRemoteSwiftPackageReference "RxKingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/RxKingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		6D9E018625C3EAB600E1E390 /* XCRemoteSwiftPackageReference "Hero" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/HeroTransitions/Hero";
@@ -877,47 +1040,9 @@
 				minimumVersion = 5.1.1;
 			};
 		};
-		6D9E01A025C3EBDD00E1E390 /* XCRemoteSwiftPackageReference "RxRealm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/RxRealm";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6D9E016525C3E8B500E1E390 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6D9E016425C3E8B500E1E390 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		6D9E016925C3E8B500E1E390 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6D9E016425C3E8B500E1E390 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		6D9E016B25C3E8B500E1E390 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6D9E016425C3E8B500E1E390 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		6D9E017325C3E8C500E1E390 /* RxDataSources */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6D9E017225C3E8C500E1E390 /* XCRemoteSwiftPackageReference "RxDataSources" */;
-			productName = RxDataSources;
-		};
-		6D9E017525C3E8C500E1E390 /* Differentiator */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6D9E017225C3E8C500E1E390 /* XCRemoteSwiftPackageReference "RxDataSources" */;
-			productName = Differentiator;
-		};
-		6D9E017B25C3E8EA00E1E390 /* RxKingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6D9E017A25C3E8EA00E1E390 /* XCRemoteSwiftPackageReference "RxKingfisher" */;
-			productName = RxKingfisher;
-		};
 		6D9E018725C3EAB600E1E390 /* Hero */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6D9E018625C3EAB600E1E390 /* XCRemoteSwiftPackageReference "Hero" */;
@@ -942,11 +1067,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6D9E019825C3EB6800E1E390 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
 			productName = NVActivityIndicatorViewExtended;
-		};
-		6D9E01A125C3EBDD00E1E390 /* RxRealm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6D9E01A025C3EBDD00E1E390 /* XCRemoteSwiftPackageReference "RxRealm" */;
-			productName = RxRealm;
 		};
 /* End XCSwiftPackageProductDependency section */
 
