@@ -31,9 +31,6 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    deinit {
-        
-    }
     override init(presenter: LoggedOutPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self

@@ -17,9 +17,10 @@ protocol RootViewControllable: ViewControllable {
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
-    // TODO: Constructor inject child builder protocols to allow building children.
-    private var currentChild: ViewableRouting?
     private let loggedOutBuilder: LoggedOutBuildable
+    // TODO : 대체 왜... 이것만 있으면 릭남
+    private var current: ViewableRouting?
+
     private let signUpBuilder: SignUpBuildable
     init(interactor: RootInteractable, viewController: RootViewControllable, loggedOutBuilder: LoggedOutBuildable, signUpBuilder: SignUpBuildable) {
         self.loggedOutBuilder = loggedOutBuilder
@@ -40,33 +41,28 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
 
 extension RootRouter: RootRouting {
     func routeToLoggedOut() -> LoggedOutActionableItem {
-        self.detachCurrentChild()
+        self.detachCurrent()
         let values = self.loggedOutBuilder.build(withListener: self.interactor)
-        let loggedOutRouter = values.0
-        let loggedOutInteractor = values.1
-        currentChild = loggedOutRouter
-        self.attachChild(loggedOutRouter)
-        self.viewController.replaceModal(viewController: loggedOutRouter.viewControllable)
-        return loggedOutInteractor
+        self.attachChild(values.router)
+        self.current = values.router
+        self.viewController.replaceModal(viewController: values.router.viewControllable)
+        return values.actionableItem
     }
     
     
     func routeToSignUp(player: Player) -> SignUpActionableItem {
-        self.detachCurrentChild()
+        self.detachCurrent()
         let values = self.signUpBuilder.build(withListener: self.interactor)
-        let signUpRouter = values.0
-        currentChild = signUpRouter
-        self.attachChild(signUpRouter)
-        let signUpInteractor = values.1
-        self.viewController.replaceModal(viewController: signUpRouter.viewControllable)
-        
-        return signUpInteractor
+        self.attachChild(values.router)
+        self.viewController.replaceModal(viewController: values.router.viewControllable)
+        return values.actionableItem
     }
     
-    private func detachCurrentChild() {
-        if let currentChild = currentChild {
-            detachChild(currentChild)
+    private func detachCurrent() {
+        if let router = self.current {
+            detachChild(router)
             viewController.replaceModal(viewController: nil)
+            self.current = nil
         }
     }
 }

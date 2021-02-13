@@ -27,11 +27,6 @@ final class SignUpInteractor: PresentableInteractor<SignUpPresentable>, SignUpIn
     weak var listener: SignUpListener?
     private let actionableItemSubject = ReplaySubject<SignUpActionableItem>.create(bufferSize: 1)
 
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
-    deinit {
-        
-    }
     override init(presenter: SignUpPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self

@@ -27,8 +27,8 @@ protocol RootListener: class {
 final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable {
     weak var router: RootRouting?
     weak var listener: RootListener?
-    private let loggedOutActionableItemSubject = ReplaySubject<LoggedOutActionableItem>.create(bufferSize: 1)
-    private let signUpActionableItemSubject = ReplaySubject<SignUpActionableItem>.create(bufferSize: 1)
+    private let loggedOutActionableItemSubject = PublishSubject<LoggedOutActionableItem>()
+    private let signUpActionableItemSubject = PublishSubject<SignUpActionableItem>()
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
@@ -51,7 +51,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     func routeToLoggedOut() {
         guard let actionItem = self.router?.routeToLoggedOut() else { return }
         // TODO : 릭남
-//        self.loggedOutActionableItemSubject.onNext(actionItem)
+        self.loggedOutActionableItemSubject.onNext(actionItem)
     }
     
     func routeToSignUp(player: Player) {

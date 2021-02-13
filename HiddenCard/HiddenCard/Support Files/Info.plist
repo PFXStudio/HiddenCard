@@ -26,6 +26,16 @@
 				<string>com.googleusercontent.apps.420192738899-vahrqhc4achbj59u8u88tsbrdfa695b1</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.nyon.hiddencard</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>hiddencard</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>

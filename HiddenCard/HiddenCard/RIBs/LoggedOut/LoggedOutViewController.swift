@@ -19,9 +19,6 @@ protocol LoggedOutPresentableListener: class {
 final class LoggedOutViewController: UIViewController, LoggedOutPresentable, LoggedOutViewControllable {
     weak var listener: LoggedOutPresentableListener?
     private var once = false
-    deinit {
-        
-    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if once == true { return }
@@ -30,18 +27,18 @@ final class LoggedOutViewController: UIViewController, LoggedOutPresentable, Log
     }
     
     func showLogin() {
-        //        guard let auth = FUIAuth.defaultAuthUI() else { return }
-        //        let providers: [FUIAuthProvider] = [
-        //            FUIGoogleAuth(authUI: auth),
-        //            //                FUIFacebookAuth(authUI: auth),
-        //            FUIPhoneAuth(authUI:auth),
-        //        ]
-        //        auth.providers = providers
-        //
-        //        let authViewController = auth.authViewController()
-        //        auth.delegate = self
-        //        authViewController.modalPresentationStyle = .fullScreen
-        //        self.present(authViewController, animated: false, completion: nil)
+        guard let auth = FUIAuth.defaultAuthUI() else { return }
+        let providers: [FUIAuthProvider] = [
+            FUIGoogleAuth(authUI: auth),
+            //                FUIFacebookAuth(authUI: auth),
+            FUIPhoneAuth(authUI:auth),
+        ]
+        auth.providers = providers
+        
+        let authViewController = auth.authViewController()
+        auth.delegate = self
+        authViewController.modalPresentationStyle = .fullScreen
+        self.present(authViewController, animated: false, completion: nil)
     }
     
     @IBAction func tappedSignUp(_ sender: Any) {
@@ -52,15 +49,15 @@ final class LoggedOutViewController: UIViewController, LoggedOutPresentable, Log
 
 extension LoggedOutViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-        //        guard let auth = FUIAuth.defaultAuthUI() else { return }
-        //        auth.providers.removeAll()
-        //        auth.delegate = nil
-        //        let uid = authDataResult?.user.uid
-        //        let displayName = authDataResult?.user.displayName
-        //        let photoURL = authDataResult?.user.photoURL
-        //        let phoneNumber = authDataResult?.user.phoneNumber
-        //        let email = authDataResult?.user.email
-        //        let player = Player(uuid: uid, name: displayName, photoURL: photoURL, email: email, phoneNumber: phoneNumber)
-        //        self.listener?.requestSignUp(player: player)
+        guard let auth = FUIAuth.defaultAuthUI() else { return }
+        auth.providers.removeAll()
+        auth.delegate = nil
+        let uid = authDataResult?.user.uid
+        let displayName = authDataResult?.user.displayName
+        let photoURL = authDataResult?.user.photoURL
+        let phoneNumber = authDataResult?.user.phoneNumber
+        let email = authDataResult?.user.email
+        let player = Player(uuid: uid, name: displayName, photoURL: photoURL, email: email, phoneNumber: phoneNumber)
+        self.listener?.requestSignUp(player: player)
     }
 }
