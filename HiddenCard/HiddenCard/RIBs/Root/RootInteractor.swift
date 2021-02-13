@@ -50,7 +50,6 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     
     func routeToLoggedOut() {
         guard let actionItem = self.router?.routeToLoggedOut() else { return }
-        // TODO : 릭남
         self.loggedOutActionableItemSubject.onNext(actionItem)
     }
     

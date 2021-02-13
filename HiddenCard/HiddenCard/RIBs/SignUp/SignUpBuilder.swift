@@ -8,13 +8,13 @@
 import RIBs
 
 protocol SignUpDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
+    var player: Player { get }
 }
 
 final class SignUpComponent: Component<SignUpDependency> {
-
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    fileprivate var player: Player {
+        return dependency.player
+    }
 }
 
 // MARK: - Builder
@@ -30,9 +30,10 @@ final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
     }
 
     func build(withListener listener: SignUpListener) -> (router: SignUpRouting, actionableItem: SignUpActionableItem) {
-        let viewController = UIStoryboard(name: "SignUp", bundle: nil).instantiateViewController(withIdentifier: String(describing: SignUpViewController.self)) as! SignUpViewController
+        let component = SignUpComponent(dependency: dependency)
+        let viewController = SignUpViewController()
         viewController.modalPresentationStyle = .fullScreen
-        let interactor = SignUpInteractor(presenter: viewController)
+        let interactor = SignUpInteractor(presenter: viewController, player: component.player)
         interactor.listener = listener
         return (SignUpRouter(interactor: interactor, viewController: viewController), interactor)
     }

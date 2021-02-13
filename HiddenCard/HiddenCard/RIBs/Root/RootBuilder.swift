@@ -12,8 +12,10 @@ protocol RootDependency: Dependency {
 
 final class RootComponent: Component<RootDependency> {
     let rootViewController: RootViewController
-    init(dependency: RootDependency, rootViewcontroller: RootViewController) {
+    let player: Player
+    init(dependency: RootDependency, rootViewcontroller: RootViewController, player: Player) {
         self.rootViewController = rootViewcontroller
+        self.player = player
         super.init(dependency: dependency)
     }
 }

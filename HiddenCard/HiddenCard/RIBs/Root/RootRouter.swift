@@ -18,7 +18,6 @@ protocol RootViewControllable: ViewControllable {
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
     private let loggedOutBuilder: LoggedOutBuildable
-    // TODO : 대체 왜... 이것만 있으면 릭남
     private var current: ViewableRouting?
 
     private let signUpBuilder: SignUpBuildable
