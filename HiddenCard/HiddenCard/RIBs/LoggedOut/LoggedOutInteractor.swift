@@ -16,7 +16,7 @@ protocol LoggedOutRouting: ViewableRouting {
 protocol LoggedOutPresentable: Presentable {
     var listener: LoggedOutPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.\
-    func showLogin()
+    func showKakaoLogin()
 }
 
 protocol LoggedOutListener: class {
@@ -47,12 +47,12 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     }
     
     func viewWillAppear() {
-        self.presenter.showLogin()
+        self.presenter.showKakaoLogin()
     }
 
     func requestSignUp(player: Player) {
         guard let _ = player.uuid else {
-            self.presenter.showLogin()
+            self.presenter.showKakaoLogin()
             return
         }
 

@@ -14,6 +14,6 @@ protocol RootDependencySignUp: Dependency {
 
 extension RootComponent: SignUpDependency {
     var player: Player {
-        return self.player
+        dependency.player
     }
 }

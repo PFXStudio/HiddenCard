@@ -10,6 +10,8 @@ import CoreData
 import Firebase
 import RIBs
 import FirebaseUI
+import KakaoSDKCommon
+import KakaoSDKAuth
 
 protocol UrlHandler: class {
     func handle(_ url: URL)
@@ -25,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        KakaoSDKCommon.initSDK(appKey: Defines.kakaoAppKey)
+
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
@@ -37,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if (AuthApi.isKakaoTalkLoginUrl(url)) {
+            return AuthController.handleOpenUrl(url: url)
+        }
+
         let sourceApplication = options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String?
         if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
             return true

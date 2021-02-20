@@ -59,8 +59,14 @@ extension SignUpViewController: ASTableDataSource {
     func numberOfSections(in tableNode: ASTableNode) -> Int {
         return 4
     }
+    
+    func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
 }
 
 extension SignUpViewController: ASTableDelegate {
-    
+    func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
+        ASCellNode()
+    }
 }

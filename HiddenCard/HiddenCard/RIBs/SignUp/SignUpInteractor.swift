@@ -27,7 +27,7 @@ final class SignUpInteractor: PresentableInteractor<SignUpPresentable>, SignUpIn
     private let actionableItemSubject = ReplaySubject<SignUpActionableItem>.create(bufferSize: 1)
     private var loadSubject = PublishSubject<Void>()
     private var displayDataSubject = PublishSubject<Player>()
-    private var player: Player
+    private let player: Player
 
     init(presenter: SignUpPresentable, player: Player) {
         self.player = player

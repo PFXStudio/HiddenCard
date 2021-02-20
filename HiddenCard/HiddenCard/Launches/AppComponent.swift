@@ -9,6 +9,8 @@ import Foundation
 import RIBs
 
 class AppComponent: Component<EmptyComponent>, RootDependency {
+    var player: Player = Player()
+    
     init() {
         super.init(dependency: EmptyComponent())
     }

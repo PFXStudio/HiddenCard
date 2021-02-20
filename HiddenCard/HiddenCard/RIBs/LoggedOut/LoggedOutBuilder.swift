@@ -8,13 +8,13 @@
 import RIBs
 
 protocol LoggedOutDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
+    var player: Player { get }
 }
 
 final class LoggedOutComponent: Component<LoggedOutDependency> {
-
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    fileprivate var player: Player {
+        return dependency.player
+    }
 }
 
 // MARK: - Builder

@@ -8,14 +8,13 @@
 import RIBs
 
 protocol RootDependency: Dependency {
+    var player: Player { get set }
 }
 
 final class RootComponent: Component<RootDependency> {
     let rootViewController: RootViewController
-    let player: Player
-    init(dependency: RootDependency, rootViewcontroller: RootViewController, player: Player) {
+    init(dependency: RootDependency, rootViewcontroller: RootViewController) {
         self.rootViewController = rootViewcontroller
-        self.player = player
         super.init(dependency: dependency)
     }
 }

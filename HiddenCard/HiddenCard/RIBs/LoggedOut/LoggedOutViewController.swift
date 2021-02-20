@@ -10,14 +10,18 @@ import RxSwift
 import UIKit
 import FirebaseUI
 import RxCocoa
+import KakaoSDKAuth
+import KakaoSDKUser
+import AsyncDisplayKit
 
 protocol LoggedOutPresentableListener: class {
     func viewWillAppear()
     func requestSignUp(player: Player)
 }
 
-final class LoggedOutViewController: UIViewController, LoggedOutPresentable, LoggedOutViewControllable {
+final class LoggedOutViewController: ASDKViewController<ASDisplayNode>, LoggedOutPresentable, LoggedOutViewControllable {
     weak var listener: LoggedOutPresentableListener?
+    var disposeBag = DisposeBag()
     private var once = false
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,7 +30,81 @@ final class LoggedOutViewController: UIViewController, LoggedOutPresentable, Log
         self.listener?.viewWillAppear()
     }
     
-    func showLogin() {
+    private func canKakaoLogin() -> Single<Void> {
+        Single<Void>.create { single -> Disposable in
+            if AuthApi.isKakaoTalkLoginAvailable() == false {
+                single(.error(HCError.invalidKakaoTalk(func: #function, line: #line)))
+                return Disposables.create()
+            }
+            
+            single(.success(()))
+            return Disposables.create()
+        }
+    }
+    
+    private func requestKakaoLogin() -> Single<OAuthToken> {
+        Single<OAuthToken>.create { single -> Disposable in
+            AuthApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let _ = error {
+                    single(.error(HCError.invalidSystem(func: #function, line: #line)))
+                    return
+                }
+                
+                guard let token = oauthToken else {
+                    single(.error(HCError.invalidUser(func: #function, line: #line)))
+                    return
+                }
+                single(.success(token))
+            }
+            return Disposables.create()
+        }
+    }
+    
+    private func requestProfile() -> Single<Player> {
+        Single<Player>.create { single -> Disposable in
+            UserApi.shared.me { (user, error) in
+                if let _ = error {
+                    single(.error(HCError.invalidUser(func: #function, line: #line)))
+                    return
+                }
+                
+                guard let userId = user?.id else {
+                    single(.error(HCError.invalidUser(func: #function, line: #line)))
+                    return
+                }
+                
+                guard let profile = user?.kakaoAccount?.profile else {
+                    single(.error(HCError.invalidProfile(func: #function, line: #line)))
+                    return
+                }
+                
+                let uuid = Defines.kakaoUserKey + String(userId)
+                print(uuid)
+                let player = Player(uuid: uuid, name: profile.nickname, thumbnailPhotoURL: profile.thumbnailImageUrl, photoURL: profile.profileImageUrl, email: nil, phoneNumber: nil)
+                single(.success(player))
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func showKakaoLogin() {
+        self.canKakaoLogin()
+            .map(self.requestKakaoLogin)
+            .flatMap({ token -> Single<Player> in
+                self.requestProfile()
+            })
+            .subscribe(onSuccess: { player in
+                // TODO :
+            }, onError: { error in
+                if let error = error as? HCError {
+                    print(">>> \(error.errorDescription)")
+                }
+            })
+            .disposed(by: self.disposeBag)
+    }
+    
+    private func showGoogleLogin() {
+        
         guard let auth = FUIAuth.defaultAuthUI() else { return }
         let providers: [FUIAuthProvider] = [
             FUIGoogleAuth(authUI: auth),
@@ -39,6 +117,7 @@ final class LoggedOutViewController: UIViewController, LoggedOutPresentable, Log
         auth.delegate = self
         authViewController.modalPresentationStyle = .fullScreen
         self.present(authViewController, animated: false, completion: nil)
+        
     }
     
     @IBAction func tappedSignUp(_ sender: Any) {

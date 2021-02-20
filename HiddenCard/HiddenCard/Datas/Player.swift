@@ -10,6 +10,7 @@ import Foundation
 struct Player: Hashable {
     var uuid: String?
     var name: String?
+    var thumbnailPhotoURL: URL?
     var photoURL: URL?
     var email: String?
     var phoneNumber: String?
