@@ -96,9 +96,8 @@ final class LoggedOutViewController: ASDKViewController<ASDisplayNode>, LoggedOu
             .subscribe(onSuccess: { player in
                 // TODO :
             }, onError: { error in
-                if let error = error as? HCError {
-                    print(">>> \(error.errorDescription)")
-                }
+                guard let error = error as? HCError else { return }
+                print(">>> \(error.errorDescription)")
             })
             .disposed(by: self.disposeBag)
     }
