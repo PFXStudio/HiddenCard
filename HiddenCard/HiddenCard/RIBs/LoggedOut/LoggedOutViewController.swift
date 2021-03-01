@@ -97,7 +97,6 @@ final class LoggedOutViewController: ASDKViewController<ASDisplayNode>, LoggedOu
                 // TODO :
             }, onError: { error in
                 guard let error = error as? HCError else { return }
-                print(">>> \(error.errorDescription)")
             })
             .disposed(by: self.disposeBag)
     }
