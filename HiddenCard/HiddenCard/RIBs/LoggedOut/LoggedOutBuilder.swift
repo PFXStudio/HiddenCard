@@ -6,6 +6,7 @@
 //
 
 import RIBs
+import FirebaseDatabase
 
 protocol LoggedOutDependency: Dependency {
     var player: Player { get }
@@ -31,7 +32,7 @@ final class LoggedOutBuilder: Builder<LoggedOutDependency>, LoggedOutBuildable {
 
     func build(withListener listener: LoggedOutListener) -> (router: LoggedOutRouting, actionableItem: LoggedOutActionableItem) {
         let viewController = UIStoryboard(name: "LoggedOut", bundle: nil).instantiateViewController(withIdentifier: String(describing: LoggedOutViewController.self)) as! LoggedOutViewController
-        let interactor = LoggedOutInteractor(presenter: viewController)
+        let interactor = LoggedOutInteractor(presenter: viewController, profileService: UserService(database: Database.database().reference()))
         interactor.listener = listener
         let router = LoggedOutRouter(interactor: interactor, viewController: viewController)
         return (router, interactor)
